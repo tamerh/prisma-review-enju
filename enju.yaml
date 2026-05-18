@@ -1,0 +1,308 @@
+# =============================================================================
+# PRISMA Systematic Review — Nanopore Phage Genomics
+# =============================================================================
+#
+# Reproducible literature screening pipeline following PRISMA 2020 guidelines.
+# Phase 1: Search → Deduplication → Abstract Screening → Human Gate
+#
+# Run with:
+#   enju_create_run(path=enju.yaml, params={...})
+
+name: "PRISMA Review — Nanopore Phage Genomics"
+description: |
+  Systematic review of studies using Oxford Nanopore Technology (ONT)
+  for bacteriophage genome assembly and characterization.
+  Follows PRISMA 2020 reporting guidelines.
+version: 1
+
+# What happens to the run branch when the run COMPLETES (per-task
+# commits to the run branch happen continuously regardless). Stated
+# explicitly for visibility — `merge` is the default if omitted.
+#   none  — leave the run branch; the default branch is untouched.
+#   merge — fast-forward-merge the run branch into the default
+#           branch, locally (the right choice for single-machine).
+#   push  — merge, then push the default branch to `remote`
+#           (needs a configured git remote; n/a for no-origin).
+sync:
+  mode: merge
+
+params:
+  - name: search_query
+    type: string
+    default: '("nanopore" OR "Oxford Nanopore" OR "MinION" OR "long-read") AND ("bacteriophage" OR "phage") AND ("genome" OR "sequencing" OR "assembly" OR "characterization")'
+    description: "PubMed search query string."
+
+  - name: date_from
+    type: string
+    default: "2018"
+    description: "Start year for publication date filter."
+
+  - name: date_to
+    type: string
+    default: "2024"
+    description: "End year for publication date filter."
+
+  - name: max_results
+    type: int
+    default: 1000
+    description: "Maximum records to retrieve from PubMed."
+
+defaults:
+  assign_to: tamer
+
+agents:
+  - name: screener-bot
+    model: claude-haiku-4-5-20251001
+    handler: claude
+    system_prompt: prompts/screener_bot.md
+    mcp_tools:
+      allow: [Read, Write, Bash]
+    args:
+      - "-p"
+      - "--model={{model}}"
+      - "--append-system-prompt={{system_prompt}}"
+      - "--allowedTools={{allowed_tools}}"
+
+  - name: resolver-bot
+    model: claude-haiku-4-5-20251001
+    handler: claude
+    system_prompt: prompts/resolver_bot.md
+    mcp_tools:
+      allow: [Read, Write, Bash]
+    args:
+      - "-p"
+      - "--model={{model}}"
+      - "--append-system-prompt={{system_prompt}}"
+      - "--allowedTools={{allowed_tools}}"
+
+  - name: extractor-bot
+    model: claude-haiku-4-5-20251001
+    handler: claude
+    system_prompt: prompts/extractor_bot.md
+    mcp_tools:
+      allow: [Read, Write, Bash]
+    args:
+      - "-p"
+      - "--model={{model}}"
+      - "--append-system-prompt={{system_prompt}}"
+      - "--allowedTools={{allowed_tools}}"
+
+  - name: synthesizer-bot
+    model: claude-haiku-4-5-20251001
+    handler: claude
+    system_prompt: prompts/synthesizer_bot.md
+    mcp_tools:
+      allow: [Read, Write, Bash]
+    args:
+      - "-p"
+      - "--model={{model}}"
+      - "--append-system-prompt={{system_prompt}}"
+      - "--allowedTools={{allowed_tools}}"
+
+tasks:
+
+  # ─── Stage 1: PubMed Search ────────────────────────────────────────────────
+
+  - id: search_pubmed
+    action: compute
+    script: scripts/01_search_pubmed.sh
+    container: python:3.12-slim
+    writes:
+      - "data/raw_records.jsonl"
+      - "data/search_stats.tsv"
+    prompt: "Search PubMed and retrieve raw records matching the query"
+
+  # ─── Stage 2: Deduplication ────────────────────────────────────────────────
+
+  - id: deduplicate
+    action: compute
+    script: scripts/02_deduplicate.sh
+    container: python:3.12-slim
+    depends_on: [search_pubmed]
+    reads:
+      - "data/raw_records.jsonl"
+    writes:
+      - "data/unique_records.jsonl"
+      - "data/dedup_stats.tsv"
+    prompt: "Remove duplicate records by PMID and DOI"
+
+  # ─── Stage 3: Abstract Screening ───────────────────────────────────────────
+
+  - id: screen_abstracts
+    action: answer
+    assign_to: screener-bot
+    depends_on: [deduplicate]
+    reads:
+      - "data/unique_records.jsonl"
+    writes:
+      - "data/screening_decisions.jsonl"
+    prompt: |
+      Apply the inclusion/exclusion criteria to every record in
+      `data/unique_records.jsonl` and write your decisions to
+      `data/screening_decisions.jsonl`.
+
+      Inclusion criteria:
+        1. Uses Oxford Nanopore Technology (ONT) sequencing
+        2. Studies isolated bacteriophage / phage genomes
+        3. Reports genome assembly or complete/draft genome sequence
+        4. Primary research article (not review, editorial, or letter)
+        5. Published 2018-2024
+
+      Exclusion criteria:
+        - Short-read only (Illumina, no ONT)
+        - Prophage prediction from bacterial genomes (no isolated phage)
+        - Conference abstract or poster only
+        - Non-English
+
+      Output format — one JSON object per line:
+        {"pmid": "...", "decision": "include|exclude|uncertain",
+         "reason": "one sentence", "criteria_failed": ["E1", ...]}
+
+      Use "uncertain" only when the abstract lacks enough detail to
+      decide; these will go to human review.
+
+  # ─── Stage 4: Human Review Gate ────────────────────────────────────────────
+
+  - id: review_screening
+    action: review
+    reviews: screen_abstracts
+    depends_on: [screen_abstracts]
+    prompt: |
+      Review the abstract screening decisions in `data/screening_decisions.jsonl`.
+
+      Check:
+        - Are "uncertain" cases handled consistently?
+        - Do any "exclude" decisions look wrong given the criteria?
+        - Is the include/exclude ratio plausible for this query?
+
+      Approve if the screening looks sound. Request changes if you
+      spot systematic errors or want specific cases re-evaluated.
+
+  # ─── Stage 5: PRISMA Counts (abstract screen) ─────────────────────────────
+
+  - id: prisma_counts
+    action: compute
+    script: scripts/03_prisma_counts.sh
+    container: python:3.12-slim
+    depends_on: [screen_abstracts]
+    reads:
+      - "data/search_stats.tsv"
+      - "data/dedup_stats.tsv"
+      - "data/screening_decisions.jsonl"
+    writes:
+      - "data/prisma_counts.tsv"
+      - "data/prisma_flow.txt"
+    prompt: "Compute PRISMA flow diagram counts from abstract screening stage"
+
+  # ─── Phase 2: Full-text retrieval ─────────────────────────────────────────
+
+  - id: fetch_fulltext
+    action: compute
+    script: scripts/04_fetch_fulltext.sh
+    container: python:3.12-slim
+    depends_on: [screen_abstracts]
+    reads:
+      - "data/screening_decisions.jsonl"
+    writes:
+      - "data/fulltext_manifest.tsv"
+    prompt: "Fetch PMC full text for included and uncertain papers"
+
+  # ─── Phase 2: Resolve uncertain cases ─────────────────────────────────────
+
+  - id: resolve_uncertain
+    action: answer
+    assign_to: resolver-bot
+    depends_on: [fetch_fulltext]
+    reads:
+      - "data/screening_decisions.jsonl"
+      - "data/fulltext_manifest.tsv"
+    writes:
+      - "data/resolved_decisions.jsonl"
+    prompt: |
+      Read `data/screening_decisions.jsonl` to find all papers marked "uncertain".
+      For each uncertain PMID, read its full text from `data/fulltext/<pmid>.txt`.
+      Apply the inclusion/exclusion criteria and make a definitive include/exclude
+      decision based on the fuller text. Write all decisions to
+      `data/resolved_decisions.jsonl` using the Write tool.
+
+  # ─── Phase 2: Review uncertain resolution ─────────────────────────────────
+
+  - id: review_resolution
+    action: review
+    reviews: resolve_uncertain
+    depends_on: [resolve_uncertain]
+    prompt: |
+      Review the uncertainty resolution decisions in `data/resolved_decisions.jsonl`.
+      Check that the "evidence" field justifies each decision, and that no paper
+      that clearly meets all criteria was excluded. Approve if sound.
+
+  # ─── Phase 2: Data extraction from included papers ────────────────────────
+
+  - id: extract_data
+    action: answer
+    assign_to: extractor-bot
+    depends_on: [fetch_fulltext, screen_abstracts]
+    reads:
+      - "data/screening_decisions.jsonl"
+      - "data/fulltext_manifest.tsv"
+    writes:
+      - "data/extracted_data.jsonl"
+    prompt: |
+      Read `data/screening_decisions.jsonl` to find papers with decision "include".
+      Also read `data/resolved_decisions.jsonl` if it exists for any additionally
+      included papers. For each included paper, read its full text from
+      `data/fulltext/<pmid>.txt` and extract the structured fields defined in your
+      system prompt. Write all records to `data/extracted_data.jsonl` using the
+      Write tool — one JSON object per paper per line.
+
+  # ─── Phase 3: Synthesis ───────────────────────────────────────────────────
+
+  - id: synthesize
+    action: answer
+    assign_to: synthesizer-bot
+    depends_on: [extract_data, resolve_uncertain]
+    reads:
+      - "data/extracted_data.jsonl"
+      - "data/resolved_decisions.jsonl"
+      - "data/prisma_counts_final.tsv"
+    writes:
+      - "data/synthesis.md"
+    prompt: |
+      Read `data/extracted_data.jsonl` for the structured per-paper data,
+      `data/resolved_decisions.jsonl` for any additionally included papers,
+      and `data/prisma_counts_final.tsv` for the PRISMA flow counts.
+
+      Write a publication-ready synthesis to `data/synthesis.md` with:
+      1. A markdown table of all included phage genome records
+         (columns: PMID, Phage, Host, Genome size (bp), Topology,
+          ONT platform, Assembler, Polishing, Hybrid, Completeness, Key finding)
+      2. A Results paragraph (~150 words) summarizing the included studies
+      3. A Methods paragraph (~100 words) describing the search and screening
+
+  # ─── Phase 2: Final PRISMA counts ─────────────────────────────────────────
+
+  - id: prisma_diagram
+    action: compute
+    script: scripts/06_prisma_diagram.sh
+    container: python:3.12-slim
+    depends_on: [prisma_counts_final]
+    reads:
+      - "data/prisma_counts_final.tsv"
+    writes:
+      - "data/prisma_diagram.svg"
+    prompt: "Generate PRISMA 2020 flow diagram as SVG"
+
+  - id: prisma_counts_final
+    action: compute
+    script: scripts/05_prisma_counts_final.sh
+    container: python:3.12-slim
+    depends_on: [resolve_uncertain, extract_data]
+    reads:
+      - "data/search_stats.tsv"
+      - "data/dedup_stats.tsv"
+      - "data/screening_decisions.jsonl"
+      - "data/resolved_decisions.jsonl"
+    writes:
+      - "data/prisma_counts_final.tsv"
+      - "data/prisma_flow_final.txt"
+    prompt: "Compute final PRISMA counts including full-text resolution stage"

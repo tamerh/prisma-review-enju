@@ -1,0 +1,5 @@
+.enju/
+__pycache__/
+*.pyc
+*.db
+*.db-*
