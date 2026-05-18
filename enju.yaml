@@ -105,7 +105,7 @@ tasks:
 
   - id: search_pubmed
     action: compute
-    script: scripts/01_search_pubmed.sh
+    script: scripts/01_search_pubmed.py
     container: python:3.12-slim
     writes:
       - "data/raw_records.jsonl"
@@ -116,7 +116,7 @@ tasks:
 
   - id: deduplicate
     action: compute
-    script: scripts/02_deduplicate.sh
+    script: scripts/02_deduplicate.py
     container: python:3.12-slim
     depends_on: [search_pubmed]
     reads:
@@ -182,7 +182,7 @@ tasks:
 
   - id: prisma_counts
     action: compute
-    script: scripts/03_prisma_counts.sh
+    script: scripts/03_prisma_counts.py
     container: python:3.12-slim
     depends_on: [screen_abstracts]
     reads:
@@ -198,7 +198,7 @@ tasks:
 
   - id: fetch_fulltext
     action: compute
-    script: scripts/04_fetch_fulltext.sh
+    script: scripts/04_fetch_fulltext.py
     container: python:3.12-slim
     depends_on: [screen_abstracts]
     reads:
@@ -283,7 +283,7 @@ tasks:
 
   - id: prisma_diagram
     action: compute
-    script: scripts/06_prisma_diagram.sh
+    script: scripts/06_prisma_diagram.py
     container: python:3.12-slim
     depends_on: [prisma_counts_final]
     reads:
@@ -294,7 +294,7 @@ tasks:
 
   - id: prisma_counts_final
     action: compute
-    script: scripts/05_prisma_counts_final.sh
+    script: scripts/05_prisma_counts_final.py
     container: python:3.12-slim
     depends_on: [resolve_uncertain, extract_data]
     reads:

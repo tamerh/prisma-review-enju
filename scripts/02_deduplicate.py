@@ -1,14 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env python3
 # Stage 2: Remove duplicates by PMID, then by DOI, then by title similarity.
-set -euo pipefail
-
-OUTDIR="$ENJU_PROJECT_DIR/data"
-
-python3 - <<'PYEOF'
-import os, json
-from collections import defaultdict
+#
+# First-class Python compute script (promoted from 02_deduplicate.sh —
+# the bash wrapper only set OUTDIR and ran a python heredoc; stdlib only).
+import json
+import os
+import re
 
 outdir = os.environ["ENJU_PROJECT_DIR"] + "/data"
+os.makedirs(outdir, exist_ok=True)
 
 records = []
 with open(f"{outdir}/raw_records.jsonl") as f:
@@ -40,10 +40,11 @@ for r in by_pmid:
     by_doi.append(r)
 n_after_doi = len(by_doi)
 
+
 # Light title-based dedup: normalize and compare
 def normalize(t):
-    import re
     return re.sub(r"[^a-z0-9]", "", t.lower())
+
 
 seen_titles = set()
 unique = []
@@ -69,6 +70,4 @@ with open(f"{outdir}/dedup_stats.tsv", "w") as f:
     f.write(f"duplicates_removed\t{n_raw - n_unique}\n")
 
 print(f"Dedup: {n_raw} → {n_unique} unique records ({n_raw - n_unique} removed)", flush=True)
-PYEOF
-
-echo "deduplicate done" >&2
+print("deduplicate done", flush=True)

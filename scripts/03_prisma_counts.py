@@ -1,13 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env python3
 # Stage 5: Compute PRISMA 2020 flow counts and render a text flow diagram.
-set -euo pipefail
-
-OUTDIR="$ENJU_PROJECT_DIR/data"
-
-python3 - <<'PYEOF'
-import os, json
+#
+# First-class Python compute script (promoted from 03_prisma_counts.sh —
+# the bash wrapper only set OUTDIR and ran a python heredoc; stdlib only).
+import json
+import os
 
 outdir = os.environ["ENJU_PROJECT_DIR"] + "/data"
+os.makedirs(outdir, exist_ok=True)
+
 
 def read_tsv(path):
     rows = {}
@@ -18,8 +19,9 @@ def read_tsv(path):
             rows[k] = int(v)
     return rows
 
-search  = read_tsv(f"{outdir}/search_stats.tsv")
-dedup   = read_tsv(f"{outdir}/dedup_stats.tsv")
+
+search = read_tsv(f"{outdir}/search_stats.tsv")
+dedup = read_tsv(f"{outdir}/dedup_stats.tsv")
 
 decisions = {"include": 0, "exclude": 0, "uncertain": 0}
 with open(f"{outdir}/screening_decisions.jsonl") as f:
@@ -29,19 +31,19 @@ with open(f"{outdir}/screening_decisions.jsonl") as f:
             d = json.loads(line)
             decisions[d.get("decision", "uncertain")] += 1
 
-n_identified  = search.get("pubmed_search_total", 0)
-n_retrieved   = search.get("pubmed_retrieved", 0)
-n_unique      = dedup.get("after_title_dedup", 0)
-n_duplicates  = dedup.get("duplicates_removed", 0)
-n_screened    = n_unique
-n_excluded    = decisions["exclude"]
-n_uncertain   = decisions["uncertain"]
-n_included    = decisions["include"]
+n_identified = search.get("pubmed_search_total", 0)
+n_retrieved = search.get("pubmed_retrieved", 0)
+n_unique = dedup.get("after_title_dedup", 0)
+n_duplicates = dedup.get("duplicates_removed", 0)
+n_screened = n_unique
+n_excluded = decisions["exclude"]
+n_uncertain = decisions["uncertain"]
+n_included = decisions["include"]
 
 counts = [
     ("identified",        n_identified),
     ("retrieved",         n_retrieved),
-    ("duplicates_removed",n_duplicates),
+    ("duplicates_removed", n_duplicates),
     ("screened",          n_screened),
     ("excluded_abstract", n_excluded),
     ("uncertain",         n_uncertain),
@@ -77,6 +79,4 @@ with open(f"{outdir}/prisma_flow.txt", "w") as f:
     f.write(flow)
 
 print(flow)
-PYEOF
-
-echo "prisma_counts done" >&2
+print("prisma_counts done", flush=True)

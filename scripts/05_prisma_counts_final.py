@@ -1,13 +1,15 @@
-#!/bin/bash
+#!/usr/bin/env python3
 # Phase 2, Stage 4: Final PRISMA counts after uncertainty resolution.
-set -euo pipefail
-
-OUTDIR="$ENJU_PROJECT_DIR/data"
-
-python3 - <<'PYEOF'
-import os, json
+#
+# First-class Python compute script (promoted from
+# 05_prisma_counts_final.sh — bash wrapper only set OUTDIR + python
+# heredoc; stdlib only).
+import json
+import os
 
 outdir = os.environ["ENJU_PROJECT_DIR"] + "/data"
+os.makedirs(outdir, exist_ok=True)
+
 
 def read_tsv(path):
     rows = {}
@@ -19,8 +21,9 @@ def read_tsv(path):
                 rows[parts[0]] = int(parts[1])
     return rows
 
+
 search = read_tsv(f"{outdir}/search_stats.tsv")
-dedup  = read_tsv(f"{outdir}/dedup_stats.tsv")
+dedup = read_tsv(f"{outdir}/dedup_stats.tsv")
 
 # Abstract screening
 abstract = {"include": 0, "exclude": 0, "uncertain": 0}
@@ -46,9 +49,9 @@ except FileNotFoundError:
 total_included = abstract["include"] + resolved["include"]
 
 n_identified = search.get("pubmed_search_total", 0)
-n_retrieved  = search.get("pubmed_retrieved", 0)
-n_dupes      = dedup.get("duplicates_removed", 0)
-n_screened   = dedup.get("after_title_dedup", 0)
+n_retrieved = search.get("pubmed_retrieved", 0)
+n_dupes = dedup.get("duplicates_removed", 0)
+n_screened = dedup.get("after_title_dedup", 0)
 
 flow = f"""
 PRISMA 2020 Flow Diagram (Final)
@@ -92,6 +95,5 @@ with open(f"{outdir}/prisma_counts_final.tsv", "w") as f:
         ("total_included", total_included),
     ]:
         f.write(f"{k}\t{v}\n")
-PYEOF
 
-echo "prisma_counts_final done" >&2
+print("prisma_counts_final done", flush=True)
