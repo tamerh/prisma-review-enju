@@ -1,0 +1,10 @@
+{
+  "action": "compute",
+  "elapsed_ms": 516,
+  "exit_code": 0,
+  "model": "",
+  "result_type": "text",
+  "script": "scripts/02_deduplicate.py",
+  "task_id": "10:2:deduplicate",
+  "timestamp": "2026-05-18T17:38:22+02:00"
+}

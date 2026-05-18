@@ -1,5 +1,5 @@
 stage	count
-after_pmid_dedup	171
-after_doi_dedup	171
-after_title_dedup	170
+after_pmid_dedup	100
+after_doi_dedup	100
+after_title_dedup	99
 duplicates_removed	1
