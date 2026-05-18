@@ -1,8 +1,8 @@
 stage	count
 identified	172
-retrieved	171
+retrieved	100
 duplicates_removed	1
-screened	170
-excluded_abstract	145
-uncertain	21
+screened	99
+excluded_abstract	62
+uncertain	33
 included_abstract	4
