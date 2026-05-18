@@ -1,0 +1,23 @@
+{
+  "instance_key": "",
+  "iteration": null,
+  "params": {
+    "date_from": "2018",
+    "date_to": "2024",
+    "max_results": 50,
+    "search_query": "(\"nanopore\" OR \"Oxford Nanopore\" OR \"MinION\" OR \"long-read\") AND (\"bacteriophage\" OR \"phage\") AND (\"genome\" OR \"sequencing\" OR \"assembly\" OR \"characterization\")"
+  },
+  "reads_artifacts": [],
+  "task_def_id": "search_pubmed",
+  "task_id": "10:2:search_pubmed",
+  "writes_artifacts": [
+    {
+      "path": "data/raw_records.jsonl",
+      "track": true
+    },
+    {
+      "path": "data/search_stats.tsv",
+      "track": true
+    }
+  ]
+}
