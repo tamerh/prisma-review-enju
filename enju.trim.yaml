@@ -1,0 +1,162 @@
+# =============================================================================
+# PRISMA Review — CONTAINED Phase-1 slice (trimmed DAG)
+# =============================================================================
+#
+# A trimmed variant of enju.yaml: the first 5 tasks only —
+#   search_pubmed → deduplicate → screen_abstracts → review_screening
+#   → prisma_counts
+# i.e. through the abstract-screening human gate + PRISMA counts.
+# The expensive downstream (full-text fetch, uncertainty resolution,
+# data extraction, final counts, SVG, synthesis) is intentionally
+# dropped — we iterate from this slice's results before extending.
+#
+# Faithful to enju.yaml: the 5 task blocks and screener-bot are copied
+# verbatim. Only screener-bot is kept (the only bot in tasks 1–5);
+# resolver/extractor/synthesizer are dropped so auto_agents doesn't
+# spin unused daemons. Scope per run is controlled via max_results at
+# create_run time (kept faithful here; pass a small value for a
+# contained run).
+#
+# Run: enju_create_run(path=enju.trim.yaml, params={..., max_results: N})
+
+name: "PRISMA Review — contained Phase-1 (trimmed)"
+description: |
+  Trimmed PRISMA slice: search → dedup → abstract screen → human
+  gate → PRISMA counts. Iterate from here before adding full-text /
+  extraction / synthesis.
+version: 1
+
+sync:
+  mode: merge
+
+params:
+  - name: search_query
+    type: string
+    default: '("nanopore" OR "Oxford Nanopore" OR "MinION" OR "long-read") AND ("bacteriophage" OR "phage") AND ("genome" OR "sequencing" OR "assembly" OR "characterization")'
+    description: "PubMed search query string."
+
+  - name: date_from
+    type: string
+    default: "2018"
+    description: "Start year for publication date filter."
+
+  - name: date_to
+    type: string
+    default: "2024"
+    description: "End year for publication date filter."
+
+  - name: max_results
+    type: int
+    default: 1000
+    description: "Maximum records to retrieve from PubMed. Pass a small value (e.g. 50) for a contained run."
+
+defaults:
+  assign_to: tamer
+
+agents:
+  - name: screener-bot
+    model: claude-haiku-4-5-20251001
+    handler: claude
+    system_prompt: prompts/screener_bot.md
+    mcp_tools:
+      allow: [Read, Write, Bash]
+    args:
+      - "-p"
+      - "--model={{model}}"
+      - "--append-system-prompt={{system_prompt}}"
+      - "--allowedTools={{allowed_tools}}"
+
+tasks:
+
+  # ─── Stage 1: PubMed Search ────────────────────────────────────────────────
+
+  - id: search_pubmed
+    action: compute
+    script: scripts/01_search_pubmed.py
+    container: python:3.12-slim
+    writes:
+      - "data/raw_records.jsonl"
+      - "data/search_stats.tsv"
+    prompt: "Search PubMed and retrieve raw records matching the query"
+
+  # ─── Stage 2: Deduplication ────────────────────────────────────────────────
+
+  - id: deduplicate
+    action: compute
+    script: scripts/02_deduplicate.py
+    container: python:3.12-slim
+    depends_on: [search_pubmed]
+    reads:
+      - "data/raw_records.jsonl"
+    writes:
+      - "data/unique_records.jsonl"
+      - "data/dedup_stats.tsv"
+    prompt: "Remove duplicate records by PMID and DOI"
+
+  # ─── Stage 3: Abstract Screening ───────────────────────────────────────────
+
+  - id: screen_abstracts
+    action: answer
+    assign_to: screener-bot
+    depends_on: [deduplicate]
+    reads:
+      - "data/unique_records.jsonl"
+    writes:
+      - "data/screening_decisions.jsonl"
+    prompt: |
+      Apply the inclusion/exclusion criteria to every record in
+      `data/unique_records.jsonl` and write your decisions to
+      `data/screening_decisions.jsonl`.
+
+      Inclusion criteria:
+        1. Uses Oxford Nanopore Technology (ONT) sequencing
+        2. Studies isolated bacteriophage / phage genomes
+        3. Reports genome assembly or complete/draft genome sequence
+        4. Primary research article (not review, editorial, or letter)
+        5. Published 2018-2024
+
+      Exclusion criteria:
+        - Short-read only (Illumina, no ONT)
+        - Prophage prediction from bacterial genomes (no isolated phage)
+        - Conference abstract or poster only
+        - Non-English
+
+      Output format — one JSON object per line:
+        {"pmid": "...", "decision": "include|exclude|uncertain",
+         "reason": "one sentence", "criteria_failed": ["E1", ...]}
+
+      Use "uncertain" only when the abstract lacks enough detail to
+      decide; these will go to human review.
+
+  # ─── Stage 4: Human Review Gate ────────────────────────────────────────────
+
+  - id: review_screening
+    action: review
+    reviews: screen_abstracts
+    depends_on: [screen_abstracts]
+    prompt: |
+      Review the abstract screening decisions in `data/screening_decisions.jsonl`.
+
+      Check:
+        - Are "uncertain" cases handled consistently?
+        - Do any "exclude" decisions look wrong given the criteria?
+        - Is the include/exclude ratio plausible for this query?
+
+      Approve if the screening looks sound. Request changes if you
+      spot systematic errors or want specific cases re-evaluated.
+
+  # ─── Stage 5: PRISMA Counts (abstract screen) ─────────────────────────────
+
+  - id: prisma_counts
+    action: compute
+    script: scripts/03_prisma_counts.py
+    container: python:3.12-slim
+    depends_on: [screen_abstracts]
+    reads:
+      - "data/search_stats.tsv"
+      - "data/dedup_stats.tsv"
+      - "data/screening_decisions.jsonl"
+    writes:
+      - "data/prisma_counts.tsv"
+      - "data/prisma_flow.txt"
+    prompt: "Compute PRISMA flow diagram counts from abstract screening stage"
