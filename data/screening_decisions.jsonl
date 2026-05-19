@@ -1,99 +1,120 @@
-{"pmid": "39704988", "decision": "exclude", "reason": "Studies bacterial endophyte (Bacillus licheniformis), not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "39599555", "decision": "uncertain", "reason": "Abstract severely truncated; insufficient information to assess inclusion criteria.", "criteria_failed": []}
-{"pmid": "39597638", "decision": "uncertain", "reason": "Abstract severely truncated; insufficient information to assess inclusion criteria.", "criteria_failed": []}
-{"pmid": "39460739", "decision": "exclude", "reason": "Focuses on phage transcriptomics; no phage genome assembly reported.", "criteria_failed": ["I3"]}
-{"pmid": "39379324", "decision": "exclude", "reason": "Toolkit for antibody display library analysis, not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "39287442", "decision": "exclude", "reason": "Algorithm for bacterial/archaeal transcript prediction, not bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "39259213", "decision": "exclude", "reason": "Focuses on prophage elements in bacterial genomes, not isolated phage genomes.", "criteria_failed": ["E2"]}
-{"pmid": "39253689", "decision": "exclude", "reason": "Studies antibiotic-resistant bacteria, not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "39141729", "decision": "exclude", "reason": "Metagenomic virome analysis; does not specify ONT platform.", "criteria_failed": ["E1", "I2"]}
-{"pmid": "39011153", "decision": "exclude", "reason": "Engineering polymerase for nanopore sequencing; not about phage genome assembly.", "criteria_failed": ["I2"]}
-{"pmid": "38847506", "decision": "uncertain", "reason": "Title mentions 'Complete genome sequence' but abstract is too truncated to assess.", "criteria_failed": []}
-{"pmid": "38793567", "decision": "exclude", "reason": "Phage display antibody libraries, not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "38790062", "decision": "exclude", "reason": "Long-read sequencing platform not specified as ONT; focuses on bacterial communities, not isolated phage.", "criteria_failed": ["E1", "I2"]}
-{"pmid": "38786130", "decision": "uncertain", "reason": "Abstract empty or severely truncated; cannot assess criteria.", "criteria_failed": []}
-{"pmid": "38771013", "decision": "exclude", "reason": "Genomic analysis of pathogenic bacteria, not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "38744831", "decision": "exclude", "reason": "Viral metagenomics; long-read platform not specified as ONT.", "criteria_failed": ["E1", "I2"]}
-{"pmid": "38726771", "decision": "exclude", "reason": "Studies E. coli laboratory strains; prophage elements mentioned but not the focus; not isolated phage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "38717818", "decision": "exclude", "reason": "Phage-plasmid elements in bacterial genomes; not isolated bacteriophage genomes.", "criteria_failed": ["E2"]}
-{"pmid": "38651885", "decision": "exclude", "reason": "Gene integration in bacterial chromosomes, not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "38616963", "decision": "exclude", "reason": "Plasmid analysis, not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "38558079", "decision": "exclude", "reason": "Long-read sequencing platform not specified as ONT.", "criteria_failed": ["E1"]}
-{"pmid": "38546735", "decision": "uncertain", "reason": "Abstract empty; title suggests novel phage but cannot assess criteria.", "criteria_failed": []}
-{"pmid": "38526733", "decision": "exclude", "reason": "ONT-cappable-seq focuses on phage transcriptomics, not genome assembly.", "criteria_failed": ["I3"]}
-{"pmid": "38461188", "decision": "exclude", "reason": "Genomic analysis of E. coli O157:H7 outbreak; not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "38453092", "decision": "exclude", "reason": "Uses PacBio (not ONT) HiFi sequencing; studies bacterial community, not isolated bacteriophage genomes.", "criteria_failed": ["E1", "I2"]}
-{"pmid": "38448490", "decision": "uncertain", "reason": "Methods paper demonstrating OLAF-Seq on phage; ONT compatible but primarily methodological.", "criteria_failed": []}
-{"pmid": "38444699", "decision": "exclude", "reason": "ONT-cappable-seq focuses on phage transcriptional landscape, not genome assembly.", "criteria_failed": ["I3"]}
-{"pmid": "38376377", "decision": "include", "reason": "Benchmarks Nanopore-based viral metagenomics with mock bacteriophage community; reports assembly and genome recovery.", "criteria_failed": []}
-{"pmid": "38360595", "decision": "include", "reason": "Isolates and characterizes two lytic phages with Oxford Nanopore sequencing and complete genome assembly.", "criteria_failed": []}
-{"pmid": "38354946", "decision": "exclude", "reason": "Oxford Nanopore used for phage-display antibody library sequencing, not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "38257985", "decision": "uncertain", "reason": "Title suggests whole genome sequences with assembly, but abstract is empty.", "criteria_failed": []}
-{"pmid": "38257834", "decision": "uncertain", "reason": "Title mentions human gut virome, but abstract too incomplete to assess criteria.", "criteria_failed": []}
-{"pmid": "38240578", "decision": "exclude", "reason": "Viral metagenomics; long-read platform not specified as ONT.", "criteria_failed": ["E1", "I2"]}
-{"pmid": "38085804", "decision": "uncertain", "reason": "Abstract empty; cannot assess against criteria.", "criteria_failed": []}
-{"pmid": "37966608", "decision": "exclude", "reason": "Phage display antibody library sequencing; not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "37923990", "decision": "exclude", "reason": "Primary focus on Liberibacter (bacterium); phage mentioned as associated element, not the main subject.", "criteria_failed": ["I2"]}
-{"pmid": "37894219", "decision": "uncertain", "reason": "Title incomplete; Shiga toxin characterization but abstract too truncated to assess criteria.", "criteria_failed": []}
-{"pmid": "37857919", "decision": "exclude", "reason": "Klebsiella oxytoca (bacterium) VIM-1 resistance; uses MinION but not focused on isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "37830077", "decision": "uncertain", "reason": "Abstract mentions phage-associated genes in bacterial genome but is severely truncated.", "criteria_failed": []}
-{"pmid": "37760762", "decision": "exclude", "reason": "Diagnostic methods for bacterial identification; not bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "37755329", "decision": "uncertain", "reason": "Methods paper for DNA assembly; phage genome assembly validation mentioned but primary focus is assembly methods.", "criteria_failed": []}
-{"pmid": "37663038", "decision": "exclude", "reason": "16S rRNA gene-based bacterial diagnostics; not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "37513009", "decision": "uncertain", "reason": "Mentions molecular characterization of bacteriophages but abstract too truncated to assess criteria.", "criteria_failed": []}
-{"pmid": "37468842", "decision": "exclude", "reason": "Genomic analysis of Enterococcus faecium (bacterium); phage genes found but not the focus.", "criteria_failed": ["I2"]}
-{"pmid": "37463032", "decision": "exclude", "reason": "Phage genome assembly workflow; long-read platform not specified as ONT.", "criteria_failed": ["E1"]}
-{"pmid": "37429841", "decision": "exclude", "reason": "DNA methylation in Bacteroides fragilis (bacterium); prophages mentioned but focus is bacterial epigenomics.", "criteria_failed": ["I2"]}
-{"pmid": "37382405", "decision": "exclude", "reason": "Uses PacBio SMRT sequencing (not ONT); metagenomic phages, not isolated.", "criteria_failed": ["E1", "I2"]}
-{"pmid": "37324034", "decision": "exclude", "reason": "Review/theoretical article on ATPase motors; not primary research on bacteriophage genomes.", "criteria_failed": ["I4"]}
-{"pmid": "37305704", "decision": "exclude", "reason": "Theoretical/review article on DNA translocation mechanisms; not primary bacteriophage research.", "criteria_failed": ["I4"]}
-{"pmid": "37234523", "decision": "uncertain", "reason": "Title mentions phage-based solutions for pathogen identification but abstract is empty.", "criteria_failed": []}
-{"pmid": "37031921", "decision": "exclude", "reason": "Metagenomic virome assembly; not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "36951563", "decision": "uncertain", "reason": "Title suggests outbreak analysis but abstract is empty.", "criteria_failed": []}
-{"pmid": "36910196", "decision": "exclude", "reason": "Single-cell genomics of uncultured bacteria; not bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "36866633", "decision": "exclude", "reason": "Teaching workshop on bacterial genome assembly; not focused on isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "36851720", "decision": "uncertain", "reason": "Title mentions expanded phage isolation but abstract too truncated to assess criteria.", "criteria_failed": []}
-{"pmid": "36851593", "decision": "uncertain", "reason": "Title mentions polyvalent phage comparative genomics but abstract too truncated to assess criteria.", "criteria_failed": []}
-{"pmid": "36840591", "decision": "exclude", "reason": "Hybrid assembly of Lactobacillus melliventris (bacterium); temperate phage present but not the primary subject.", "criteria_failed": ["I2"]}
-{"pmid": "36794936", "decision": "uncertain", "reason": "T7-like Pseudomonas phage (LUZ100) characterization mentioned in title but abstract empty.", "criteria_failed": []}
-{"pmid": "36781732", "decision": "exclude", "reason": "Nanopore sequencing methods for AMR bacterial genome analysis; phages and prophages mentioned but not the focus.", "criteria_failed": ["I2"]}
-{"pmid": "36779715", "decision": "include", "reason": "Nanopore sequencing reveals complete circular genome of lysogenic Pseudomonas bacteriophage Fyn8.", "criteria_failed": []}
-{"pmid": "36773904", "decision": "exclude", "reason": "Nanopore-based metagenomic analysis of river sediments; focus on bacterial/archaeal communities and resistomes.", "criteria_failed": ["I2"]}
-{"pmid": "36748517", "decision": "exclude", "reason": "P1-like phage-plasmid elements in Salmonella; prophage-like elements, not isolated bacteriophage genomes.", "criteria_failed": ["E2"]}
-{"pmid": "36677403", "decision": "exclude", "reason": "Hybrid assembly of Salmonella enterica (bacterium); prophages present but not isolated phage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "36622155", "decision": "uncertain", "reason": "Longitudinal metagenomics of cheese rind; long-read platform not clearly specified as ONT; abstract incomplete.", "criteria_failed": []}
-{"pmid": "36617974", "decision": "exclude", "reason": "Long-read dataset analysis of bacterial genomes; focus on programmed inversions, not bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "36608657", "decision": "exclude", "reason": "Long-read sequencing of Prochlorococcus (bacterium); phage particles mentioned but focus is bacterial elements.", "criteria_failed": ["I2"]}
-{"pmid": "36557761", "decision": "uncertain", "reason": "Genome-based analysis of novel bacteria but abstract too truncated to assess criteria.", "criteria_failed": []}
-{"pmid": "36541812", "decision": "exclude", "reason": "Phage-tail-like bacteriocins (fonticins); not bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "36533252", "decision": "uncertain", "reason": "Title mentions integration of elements but abstract too truncated to assess criteria.", "criteria_failed": []}
-{"pmid": "36532687", "decision": "exclude", "reason": "Protein-ligand screening using phage display; not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "36517572", "decision": "uncertain", "reason": "Isolated T4-like phage (vB_EcoS_ULI-O80_Stx2d) with genome sequencing reported but long-read platform not specified as ONT.", "criteria_failed": []}
-{"pmid": "36455212", "decision": "exclude", "reason": "Phage portal protein used as biosensor; not bacteriophage genome assembly.", "criteria_failed": ["I3"]}
-{"pmid": "36374025", "decision": "uncertain", "reason": "Plasmid carrying mobile resistance gene mentioned in title but abstract empty.", "criteria_failed": []}
-{"pmid": "36226992", "decision": "uncertain", "reason": "Genomic characterization mentioned in title but abstract too truncated to assess criteria.", "criteria_failed": []}
-{"pmid": "36167684", "decision": "exclude", "reason": "Uses PacBio SMRT sequencing (not ONT); metagenomic viral genomes, not isolated.", "criteria_failed": ["E1", "I2"]}
-{"pmid": "36052951", "decision": "exclude", "reason": "Opinion/review article on nucleotide modifications; not primary research on bacteriophage genomes.", "criteria_failed": ["I4"]}
-{"pmid": "35938717", "decision": "exclude", "reason": "Long-read metagenomics of bacterioplankton (bacteria); not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "35893685", "decision": "uncertain", "reason": "Five virulent phages isolated from cheese but abstract too truncated to confirm genome assembly reported.", "criteria_failed": []}
-{"pmid": "35695508", "decision": "exclude", "reason": "Uses PacBio long-read (not ONT); viral metagenomics, not isolated phages.", "criteria_failed": ["E1", "I2"]}
-{"pmid": "35685363", "decision": "exclude", "reason": "ONT-cappable-seq focuses on phage transcriptional landscape; no genome assembly reported.", "criteria_failed": ["I3"]}
-{"pmid": "35679948", "decision": "exclude", "reason": "Uses PacBio sequencing (not ONT); metagenomic enteric viruses, not isolated.", "criteria_failed": ["E1", "I2"]}
-{"pmid": "35531280", "decision": "exclude", "reason": "Oxford Nanopore used for DNA modification detection; not bacteriophage genome assembly.", "criteria_failed": ["I2", "I3"]}
-{"pmid": "35479623", "decision": "uncertain", "reason": "Genomic characterization of uropathogenic bacterium mentioned in title but abstract empty.", "criteria_failed": []}
-{"pmid": "35459792", "decision": "exclude", "reason": "Review of biological nanopore technology; not primary research on bacteriophage genomes.", "criteria_failed": ["I4"]}
-{"pmid": "35459792", "decision": "exclude", "reason": "Metagenomic methylation patterns in bacterial genomes; long-read platform not specified as ONT.", "criteria_failed": ["E1", "I2"]}
-{"pmid": "35443609", "decision": "exclude", "reason": "Hybrid assembly of Alcaligenes faecalis (bacterium); not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "35394418", "decision": "uncertain", "reason": "Pathogenomes and Shiga toxin variation in STEC mentioned but abstract too truncated to assess criteria.", "criteria_failed": []}
-{"pmid": "35361849", "decision": "exclude", "reason": "Mouse transgenesis using phage Bxb1 integrase; not bacteriophage genome assembly.", "criteria_failed": ["I2"]}
-{"pmid": "35344565", "decision": "uncertain", "reason": "Oxford Nanopore used to analyze C. acnes phage methylome; genome sequencing done but focus is methylation patterns, not assembly.", "criteria_failed": []}
-{"pmid": "35225670", "decision": "exclude", "reason": "Uses long-read PacBio sequencing (not ONT); complete phage genome but not ONT platform.", "criteria_failed": ["E1"]}
-{"pmid": "35208823", "decision": "exclude", "reason": "Metagenome-assembled viral genomes from biogas reactor; not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "35196217", "decision": "uncertain", "reason": "Comparative genomics of 26 complete circular phage genomes mentioned in title but abstract empty.", "criteria_failed": []}
-{"pmid": "35095794", "decision": "uncertain", "reason": "Whole genome sequencing with biopesticidal origin in title but abstract empty.", "criteria_failed": []}
-{"pmid": "35084299", "decision": "uncertain", "reason": "Genome diversity of domesticated organism mentioned in title but abstract empty.", "criteria_failed": []}
-{"pmid": "35019836", "decision": "uncertain", "reason": "Genomic evolution of multidrug-resistant organism mentioned in title but abstract empty.", "criteria_failed": []}
-{"pmid": "34787444", "decision": "exclude", "reason": "DNA methylation in Group A Streptococcus (bacterium); not isolated bacteriophage genomes.", "criteria_failed": ["I2"]}
-{"pmid": "34772986", "decision": "include", "reason": "Isolation and complete genomic analysis of polyvalent enterobacteria phage 2019SD1 using Oxford Nanopore sequencing.", "criteria_failed": []}
-{"pmid": "34696499", "decision": "uncertain", "reason": "Newly isolated T4-like phage with generalized transduction study mentioned; abstract incomplete to confirm ONT use.", "criteria_failed": []}
-{"pmid": "34688274", "decision": "exclude", "reason": "Vancomycin-resistant E. faecium typing using phage content from MinION sequencing; bacteria genomes, not isolated phages.", "criteria_failed": ["I2"]}
+{"pmid": "40348491", "decision": "exclude", "reason": "Review and commentary on FMT for IBD, not an RCT; also published 2025 outside eligible range.", "criteria_failed": ["E1", "I5"]}
+{"pmid": "39547534", "decision": "exclude", "reason": "Cost-effectiveness analysis for first or second CDI episode (not recurrent/refractory CDI), and published 2025.", "criteria_failed": ["I1", "I5"]}
+{"pmid": "39509684", "decision": "exclude", "reason": "Narrative review of CDI diagnosis and management for surgeons, not an RCT; published 2025.", "criteria_failed": ["E1", "I5"]}
+{"pmid": "39484168", "decision": "uncertain", "reason": "Abstract truncated; population appears to be rCDI but study design cannot be determined from available text.", "criteria_failed": []}
+{"pmid": "39488230", "decision": "exclude", "reason": "Review/commentary on CDI management in elderly patients, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "39366468", "decision": "exclude", "reason": "Study of CP101 oral microbiome therapeutic (not traditional FMT) for rCDI; published 2025 outside eligible range.", "criteria_failed": ["I5", "E3"]}
+{"pmid": "38841848", "decision": "exclude", "reason": "Review of microbiome-based therapies for IBD, not an RCT and indication is IBD not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "38690018", "decision": "exclude", "reason": "Editorial on FMT for irritable bowel syndrome; not an RCT and indication is IBS not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "38680517", "decision": "exclude", "reason": "Clinical practice guideline update for CDI management, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "38609760", "decision": "exclude", "reason": "BSG/HIS clinical guideline for FMT in recurrent or refractory CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "38609165", "decision": "exclude", "reason": "BSG/HIS clinical guideline for FMT in recurrent or refractory CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "38501667", "decision": "exclude", "reason": "Observational/retrospective study of FMT combined with bezlotoxumab in IBD patients with rCDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "38470061", "decision": "exclude", "reason": "Narrative review of fecal microbiota live-jslm (Rebyota) for rCDI prevention, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "38391047", "decision": "exclude", "reason": "Systematic review of FMT in children across multiple indications, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "38292634", "decision": "exclude", "reason": "Review of gut-targeted therapies for type 2 diabetes mellitus; indication is not rCDI and not an RCT.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "38019088", "decision": "exclude", "reason": "Post-hoc subgroup analysis of the PUNCH CD3 phase III trial for RBX2660 in rCDI, not a primary RCT publication.", "criteria_failed": ["E1"]}
+{"pmid": "37872499", "decision": "uncertain", "reason": "Proof-of-concept study comparing FMT delivery methods (enema vs colonoscopy) in rCDI; unclear whether randomized allocation was used.", "criteria_failed": []}
+{"pmid": "37823484", "decision": "exclude", "reason": "Post-hoc analysis of the ECOSPOR III trial for VOWST Oral Spores in rCDI, not a primary RCT publication.", "criteria_failed": ["E1"]}
+{"pmid": "37756322", "decision": "exclude", "reason": "Randomized study of autologous FMT for non-rCDI conditions; primary indication is not rCDI.", "criteria_failed": ["E2"]}
+{"pmid": "37606431", "decision": "exclude", "reason": "Case report of recurrent multidrug-resistant CDI in IBD, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "37484415", "decision": "exclude", "reason": "Observational metabolomics study of short-chain fatty acid changes associated with FMT in rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "37404011", "decision": "exclude", "reason": "Study of microbial consortium for ARO decolonization; indication is not rCDI and intervention is not FMT.", "criteria_failed": ["E2", "E3"]}
+{"pmid": "37274301", "decision": "exclude", "reason": "Meta-analysis comparing microbiota restoration efficacy across open-label trials and RCTs for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "37096495", "decision": "exclude", "reason": "Review of FMT for treatment of recurrent Clostridioides difficile, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36969340", "decision": "exclude", "reason": "RCT of FMT for progressive supranuclear palsy (neurological condition), not rCDI.", "criteria_failed": ["E2"]}
+{"pmid": "36778473", "decision": "exclude", "reason": "RCT of FMT for inflammatory bowel disease (CD/UC); primary indication is IBD, not rCDI.", "criteria_failed": ["E2"]}
+{"pmid": "36717202", "decision": "uncertain", "reason": "Abstract is empty; cannot determine study design, population, or intervention from available text.", "criteria_failed": []}
+{"pmid": "36656270", "decision": "exclude", "reason": "Review comparing fresh, frozen, and lyophilized FMT types for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36557703", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT in pediatric/adolescent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36519447", "decision": "uncertain", "reason": "Abstract truncated; appears to examine gut microbiota differences after FMT for rCDI but study design cannot be confirmed as RCT.", "criteria_failed": []}
+{"pmid": "36468073", "decision": "exclude", "reason": "Meta-analysis evaluating different fecal bacteria product types for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36451382", "decision": "exclude", "reason": "Protocol for a systematic review of oral FMT in recurrent bowel diseases, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36287379", "decision": "uncertain", "reason": "PUNCH CD3 phase III placebo-controlled RCT of RBX2660 (live biotherapeutic from donor stool) for rCDI; meets design, population, and outcome criteria but borderline on whether RBX2660 constitutes FMT per inclusion criteria.", "criteria_failed": []}
+{"pmid": "36168377", "decision": "uncertain", "reason": "Abstract is empty; cannot determine study design, population, or outcomes from available text.", "criteria_failed": []}
+{"pmid": "36158494", "decision": "exclude", "reason": "Review of gut microbiota across multiple gastrointestinal diseases, not an RCT for rCDI.", "criteria_failed": ["E1"]}
+{"pmid": "36152636", "decision": "uncertain", "reason": "EarlyFMT RCT comparing FMT vs antibiotics for first or second CDI episode; borderline I1 since second episode may qualify as rCDI depending on definition.", "criteria_failed": []}
+{"pmid": "36066910", "decision": "exclude", "reason": "Systematic review of adverse events associated with FMT in children, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "35884093", "decision": "exclude", "reason": "Systematic review of FMT for decompensated cirrhosis; indication is not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "35841835", "decision": "exclude", "reason": "Review of host and microbial metabolites in CDI pathogenesis and treatment mechanisms, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "35760542", "decision": "exclude", "reason": "Protocol for a randomized trial of FMT for irritable bowel syndrome (MISCEAT); indication is IBS not rCDI, and no trial data reported.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "35479587", "decision": "exclude", "reason": "Systematic review and meta-analysis of adverse events in FMT across studies, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "35463939", "decision": "exclude", "reason": "Secondary analysis of HrQoL data from a Danish RCT of FMT for rCDI, not a primary RCT publication.", "criteria_failed": ["E1"]}
+{"pmid": "35398532", "decision": "uncertain", "reason": "OpTION study is an RCT for recurrent CDI; abstract truncated and unclear whether an FMT intervention arm is included.", "criteria_failed": []}
+{"pmid": "35193638", "decision": "exclude", "reason": "FRESCO RCT of frozen encapsulated multi-donor stool filtrate for active ulcerative colitis; indication is UC, not rCDI.", "criteria_failed": ["E2"]}
+{"pmid": "35118227", "decision": "exclude", "reason": "Systematic review of FMT for severe or fulminant CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "39131119", "decision": "exclude", "reason": "Retrospective cohort study of predictors of FMT failure for CDI at a single center, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "35050941", "decision": "exclude", "reason": "Updated meta-analysis of predictors of FMT failure in CDI/rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34992678", "decision": "uncertain", "reason": "Abstract is empty; cannot determine study design, population, or outcomes from available text.", "criteria_failed": []}
+{"pmid": "34864789", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT outcomes for CDI in IBD patients, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34815646", "decision": "exclude", "reason": "Meta-analysis of adverse events of FMT from high-quality prospective randomized studies, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34735024", "decision": "exclude", "reason": "Review of FMT for gastrointestinal diseases across multiple indications, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34678515", "decision": "exclude", "reason": "ESCMID 2021 treatment guidelines for CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34585964", "decision": "exclude", "reason": "Animal (mouse) study of osmotic laxative effects on CDI susceptibility; no FMT arm and not a human study.", "criteria_failed": ["E4", "E3"]}
+{"pmid": "34557546", "decision": "exclude", "reason": "Systematic review of CDI in patients with chronic kidney disease, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34516460", "decision": "exclude", "reason": "Meta-analysis comparing FMT versus medical therapy for Clostridium difficile infection, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34484424", "decision": "exclude", "reason": "Systematic review with meta-analysis of encapsulated FMT for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34275058", "decision": "exclude", "reason": "Review/commentary on heterogeneity among RCTs of FMT for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34232137", "decision": "exclude", "reason": "Review of recent advances in CDI epidemiology, diagnosis, and treatment in children, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34154439", "decision": "uncertain", "reason": "Randomized comparison of capsule FMT vs placebo for rCDI; abstract describes enrollment progress rather than final outcomes, so it is unclear whether I4 (clinical outcomes reported) is met.", "criteria_failed": []}
+{"pmid": "33981340", "decision": "exclude", "reason": "Systematic review of FMT for active ulcerative colitis; indication is UC, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "33844988", "decision": "exclude", "reason": "Mechanistic study characterizing miRNA alterations following FMT for rCDI from prospective cohorts, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33800841", "decision": "exclude", "reason": "Ten-year observational follow-up study of FMT outcomes for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33795620", "decision": "exclude", "reason": "Systematic review of FMT versus vancomycin for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33748913", "decision": "exclude", "reason": "Systematic review with meta-analysis of FMT for severe or fulminant CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33694229", "decision": "include", "reason": "Open-label 3-arm RCT comparing 12-strain bacterial mixture vs FMT vs vancomycin for recurrent CDI, with clinical cure as the primary outcome.", "criteria_failed": []}
+{"pmid": "33631102", "decision": "exclude", "reason": "Study of Microbial Ecosystem Therapeutic 2 (MET-2), a defined bacterial mixture for rCDI; intervention is not FMT and no FMT arm is described.", "criteria_failed": ["E3"]}
+{"pmid": "33614028", "decision": "exclude", "reason": "Narrative review of FMT role in rCDI and emerging indications beyond CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33496893", "decision": "exclude", "reason": "Systematic review and meta-analysis of predictors of failure after FMT for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33471490", "decision": "exclude", "reason": "Systematic review with meta-analysis of oral FMT capsules for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33437951", "decision": "exclude", "reason": "Updated systematic review and meta-analysis of FMT for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33121693", "decision": "exclude", "reason": "Review of FMT for ulcerative colitis; indication is UC, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "33106983", "decision": "exclude", "reason": "Network meta-analysis comparing therapies for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33035780", "decision": "exclude", "reason": "Review of FMT for inflammatory bowel disease; indication is IBD, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "32999906", "decision": "exclude", "reason": "Narrative review of gastrointestinal microbiome in clinical practice across multiple conditions, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "32979161", "decision": "exclude", "reason": "Review of FMT for initial CDI treatment; population is not recurrent/refractory CDI.", "criteria_failed": ["E1", "I1"]}
+{"pmid": "36777748", "decision": "exclude", "reason": "Review of FMT as evolving therapy for ulcerative colitis; indication is UC, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "32632582", "decision": "exclude", "reason": "Narrative review of bezlotoxumab for rCDI prevention from a patient perspective; no FMT intervention arm.", "criteria_failed": ["E1", "E3"]}
+{"pmid": "32618715", "decision": "exclude", "reason": "Literature review of CDI treatment in solid organ transplant recipients, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "32518854", "decision": "uncertain", "reason": "Abstract severely truncated; title suggests FMT for rCDI patients on antibiotics but study design cannot be determined.", "criteria_failed": []}
+{"pmid": "32266160", "decision": "exclude", "reason": "Review of FMT in neurological disorders; indication is not rCDI.", "criteria_failed": ["E2"]}
+{"pmid": "32255488", "decision": "exclude", "reason": "Study of SER-109 (donor-derived purified spores), not traditional FMT; intervention does not constitute FMT.", "criteria_failed": ["E3"]}
+{"pmid": "32182248", "decision": "exclude", "reason": "RCT of FMT and probiotic VSL#3 for active ulcerative colitis; indication is UC, not rCDI.", "criteria_failed": ["E2"]}
+{"pmid": "32166622", "decision": "exclude", "reason": "Meta-analysis comparing colonoscopy, capsule, enema, and nasogastric tube FMT delivery routes for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "32083498", "decision": "exclude", "reason": "Review of fecal transplantation for ulcerative colitis; indication is UC, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "32009472", "decision": "exclude", "reason": "Network meta-analysis of biologics, tofacitinib, and FMT for ulcerative colitis; indication is UC, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "31993353", "decision": "exclude", "reason": "Observational study of BMI effects after FMT in children treated for CDI or UC, not a primary RCT of rCDI outcomes.", "criteria_failed": ["E1"]}
+{"pmid": "31976311", "decision": "uncertain", "reason": "Double-blinded randomized two-arm pilot multicenter FMT study; abstract truncated and primary indication cannot be confirmed as rCDI.", "criteria_failed": []}
+{"pmid": "31950808", "decision": "exclude", "reason": "Review of FMT safety and efficacy in ulcerative colitis; indication is UC, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "31803254", "decision": "exclude", "reason": "Review and commentary on knowledge gaps in FMT use for recurrent/refractory CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31699731", "decision": "exclude", "reason": "Bayesian network meta-analysis comparing FMT with bezlotoxumab for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31662862", "decision": "exclude", "reason": "Bayesian network meta-analysis of RCTs for rCDI therapies, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31570017", "decision": "exclude", "reason": "Review of microbiota modulation therapies including probiotics and FMT for luminal GI disorders, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31493500", "decision": "exclude", "reason": "Systematic review of RCTs for prevention of recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31476300", "decision": "uncertain", "reason": "Abstract is empty; title suggests a biomarker association study of serum N-glycan changes with successful FMT, likely not a primary RCT.", "criteria_failed": []}
+{"pmid": "31472233", "decision": "exclude", "reason": "Critical narrative review of available RCTs of FMT for CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31379333", "decision": "exclude", "reason": "Review of evolving FMT use and emerging therapeutic indications across multiple conditions, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31361890", "decision": "exclude", "reason": "Review of RCTs examining FMT for recurrent CDI, written for pharmacists; not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31254675", "decision": "exclude", "reason": "Observational study assessing trial eligibility criteria representativeness in rCDI populations, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31201141", "decision": "exclude", "reason": "Review of FMT applications beyond CDI across multiple indications, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31190948", "decision": "exclude", "reason": "Commentary/review on variable success of microbiome-targeting therapies including FMT, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31169545", "decision": "exclude", "reason": "Review of FMT current concepts in children across CDI and other indications, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31136009", "decision": "exclude", "reason": "Systematic review with meta-analysis of FMT efficacy for irritable bowel syndrome; indication is IBS, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "31066530", "decision": "exclude", "reason": "Review of FMT current status and prospects across CDI and other indications, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31017741", "decision": "exclude", "reason": "Review of current FMT applications in intestinal disorders including CDI and other conditions, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31005136", "decision": "exclude", "reason": "Review of CDI management in stem cell transplant and hematologic malignancy populations, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30986885", "decision": "exclude", "reason": "Review of gut microbiota modulation for ulcerative colitis; indication is UC, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30986562", "decision": "exclude", "reason": "Systematic review of FMT for decolonization of antibiotic-resistant organisms; indication is MDR colonization, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30957161", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT cure rates in controlled trials for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30926290", "decision": "exclude", "reason": "Review of FMT for decolonization of antibiotic-resistant bacteria; indication is ARB colonization, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30906424", "decision": "exclude", "reason": "Review of FMT for inflammatory bowel disease treatment; indication is IBD, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30815766", "decision": "exclude", "reason": "Clinical review of FMT utility in immunocompromised patients across CDI and non-CDI indications, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30673716", "decision": "exclude", "reason": "Updated systematic evaluation/meta-analysis of FMT for recurrent/refractory CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30627262", "decision": "exclude", "reason": "Single-center long-term observational follow-up study of FMT outcomes in CDI patients, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30610862", "decision": "include", "reason": "Single-center randomized trial comparing FMT vs fidaxomicin vs vancomycin in adults with recurrent CDI, reporting clinical treatment success.", "criteria_failed": []}
+{"pmid": "30480772", "decision": "exclude", "reason": "Review of fecal transplantation for inflammatory bowel disease; indication is IBD, not rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30403550", "decision": "exclude", "reason": "Review of clinical applications and potential of FMT across multiple conditions, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30388112", "decision": "uncertain", "reason": "Single-center comparison of orally administered lyophilized FMT vs frozen FMT by enema for recurrent CDI with preliminary efficacy data; randomization not explicitly stated in truncated abstract.", "criteria_failed": []}
+{"pmid": "30335629", "decision": "exclude", "reason": "Review of post-infectious IBS following CDI; focus is IBS pathophysiology, not FMT RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30288286", "decision": "exclude", "reason": "Meta-analysis of different FMT protocols for recurrent CDI using random-effects model, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30246002", "decision": "exclude", "reason": "Systematic review of FMT efficacy and safety for CDI in immunocompromised patients, not a primary RCT.", "criteria_failed": ["E1"]}
