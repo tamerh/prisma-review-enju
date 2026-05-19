@@ -1,0 +1,10 @@
+{
+  "action": "compute",
+  "elapsed_ms": 237,
+  "exit_code": 0,
+  "model": "",
+  "result_type": "text",
+  "script": "scripts/03_prisma_counts.py",
+  "task_id": "10:5:prisma_counts",
+  "timestamp": "2026-05-19T18:02:40+02:00"
+}
