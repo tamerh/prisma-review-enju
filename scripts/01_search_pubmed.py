@@ -35,24 +35,26 @@ params = {
     "mindate": date_from, "maxdate": date_to,
     "datetype": "pdat",
     "retmax": max_res, "retmode": "json",
-    "usehistory": "y",
 }
 esearch = json.loads(_get(f"{BASE}/esearch.fcgi", params, timeout=30))["esearchresult"]
-pmids = esearch["idlist"]
-total_found = int(esearch["count"])
-webenv = esearch["webenv"]
-query_key = esearch["querykey"]
+pmids = esearch["idlist"]            # already capped to max_res by retmax
+total_found = int(esearch["count"])  # full corpus size (PRISMA "identified")
 
-print(f"Found {total_found} records; retrieving {len(pmids)}", file=sys.stderr)
+print(f"Found {total_found} records; retrieving {len(pmids)} (cap={max_res})",
+      file=sys.stderr)
 
-# Step 2: efetch — fetch abstracts in batches
+# Step 2: efetch by EXPLICIT id — exactly the capped PMID list, batched.
+# Previously this paged the esearch WebEnv history, which holds the FULL
+# result set, so retmax=100 over-fetched past max_results (a max_results
+# of 50 still pulled 100). Fetching by the already-capped idlist makes
+# len(records) == len(pmids) == min(max_results, total_found).
 records = []
 batch = 100
 for start in range(0, len(pmids), batch):
+    batch_ids = pmids[start:start + batch]
     time.sleep(0.4)   # NCBI rate limit: 3 req/s without API key
     xml_text = _get(f"{BASE}/efetch.fcgi", {
-        "db": "pubmed", "WebEnv": webenv, "query_key": query_key,
-        "retstart": start, "retmax": batch,
+        "db": "pubmed", "id": ",".join(batch_ids),
         "rettype": "abstract", "retmode": "xml",
     }, timeout=60)
     # Parse XML minimally — extract PMID, title, abstract, year, journal

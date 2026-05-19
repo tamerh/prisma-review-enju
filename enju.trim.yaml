@@ -32,12 +32,12 @@ sync:
 params:
   - name: search_query
     type: string
-    default: '("nanopore" OR "Oxford Nanopore" OR "MinION" OR "long-read") AND ("bacteriophage" OR "phage") AND ("genome" OR "sequencing" OR "assembly" OR "characterization")'
+    default: '("fecal microbiota transplant*" OR "faecal microbiota transplant*" OR FMT) AND ("Clostridioides difficile" OR "Clostridium difficile" OR CDI) AND (randomized OR randomised OR "randomized controlled trial"[pt])'
     description: "PubMed search query string."
 
   - name: date_from
     type: string
-    default: "2018"
+    default: "2013"
     description: "Start year for publication date filter."
 
   - name: date_to
@@ -55,7 +55,7 @@ defaults:
 
 agents:
   - name: screener-bot
-    model: claude-haiku-4-5-20251001
+    model: claude-sonnet-4-6
     handler: claude
     system_prompt: prompts/screener_bot.md
     mcp_tools:
@@ -108,18 +108,24 @@ tasks:
       `data/unique_records.jsonl` and write your decisions to
       `data/screening_decisions.jsonl`.
 
-      Inclusion criteria:
-        1. Uses Oxford Nanopore Technology (ONT) sequencing
-        2. Studies isolated bacteriophage / phage genomes
-        3. Reports genome assembly or complete/draft genome sequence
-        4. Primary research article (not review, editorial, or letter)
-        5. Published 2018-2024
+      Decide each record SOLELY from its own title/abstract in
+      that file. Do NOT read the README, prior results, or any
+      other project file; your decision count must equal the
+      number of input records.
 
-      Exclusion criteria:
-        - Short-read only (Illumina, no ONT)
-        - Prophage prediction from bacterial genomes (no isolated phage)
-        - Conference abstract or poster only
-        - Non-English
+      Inclusion criteria (ALL):
+        1. Population: recurrent/refractory C. difficile infection
+        2. Intervention: fecal microbiota transplantation (FMT)
+        3. Design: randomized controlled trial
+        4. Reports a clinical outcome (cure / recurrence)
+        5. Human, English, published 2013-2024
+
+      Exclusion criteria (ANY):
+        - Not an RCT (case series/cohort/review/protocol/editorial)
+        - Indication is not rCDI (FMT for IBD/IBS/other only)
+        - No FMT arm (probiotics/antibiotics only)
+        - Animal / in-vitro / modelling only
+        - Non-English or abstract-only without trial data
 
       Output format — one JSON object per line:
         {"pmid": "...", "decision": "include|exclude|uncertain",
