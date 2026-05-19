@@ -1,0 +1,7 @@
+{
+  "model": "claude-sonnet-4-6",
+  "result_type": "text",
+  "task_id": "10:5:screen_abstracts",
+  "timestamp": "2026-05-19T17:00:24+02:00",
+  "username": "screener-bot"
+}
