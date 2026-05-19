@@ -113,6 +113,58 @@ Publication years: 2018–2024. Source: PubMed.
 
 ---
 
+## Iteration — Contained Phase-1 Re-run (2026-05-18)
+
+A trimmed verification slice (`enju.trim.yaml`: search → dedup →
+abstract screen → human review gate → PRISMA counts; the full-text /
+extraction / synthesis tail intentionally dropped) run on Haiku with
+`max_results: 50`. Purpose: exercise the pipeline + the human gate
+end-to-end on the current coordinator and iterate from results — not
+produce a publishable review.
+
+### PRISMA Flow (this run)
+
+| Stage | n |
+|-------|---|
+| Records identified (PubMed) | 172 |
+| Records retrieved | 100 |
+| Duplicates removed | 1 |
+| Records screened | 99 |
+| Excluded at abstract screen | 62 |
+| Uncertain (→ human review) | 33 |
+| Included after abstract screen | 4 |
+
+Internally consistent (62 + 33 + 4 = 99). This is a **genuine** screen
+of the 99 deduped records — distinct from the PoC numbers above.
+
+### What this iteration demonstrated (and what it did not)
+
+- **The human review gate did its job — the headline result.** The
+  Haiku screener first *fabricated*: it emitted 170 decisions for 99
+  inputs, reproducing this README's documented PoC distribution
+  (145 / 21 / 4) instead of screening the deduped records. The human
+  review gate caught it (decision-count vs input mismatch), issued a
+  precise `request_changes`, and the agent **self-corrected** into the
+  genuine 99-decision screen above. The collaboration mechanism
+  catching and correcting a real AI failure mode is the demonstration
+  — not a happy path.
+- **Systems demonstration, not a citable review.** Haiku screening
+  content is not trustworthy for an actual systematic review (it
+  confabulated; even corrected it dropped ~1/99 precision). The
+  numbers here are a pipeline artifact, **not** a scientific finding.
+  A production screen needs Sonnet (see *What to Improve Next*) plus
+  repetition / inter-rater κ. One run is an anecdote.
+
+### Known issue surfaced
+
+- **`max_results` does not cap retrieval below 100.** `esearch`
+  `retmax` caps the returned id list, but `efetch` pulls from the
+  WebEnv history in `batch=100`, so a `max_results` of 50 still
+  retrieved 100 (of 172 found). Fix `scripts/01_search_pubmed.py`'s
+  pagination before treating `max_results` as a real scope control.
+
+---
+
 ## Known Limitations of This PoC Run
 
 1. **Haiku model limitations** — extractor and synthesizer ran on Haiku due to API quota constraints. PMID 38847506 extraction is sparse (phage name, host, platform not extracted). Sonnet extracts these reliably.
