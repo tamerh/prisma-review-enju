@@ -1,0 +1,10 @@
+{
+  "action": "compute",
+  "elapsed_ms": 4639,
+  "exit_code": 0,
+  "model": "",
+  "result_type": "text",
+  "script": "scripts/01_search_pubmed.py",
+  "task_id": "10:3:search_pubmed",
+  "timestamp": "2026-05-19T13:22:38+02:00"
+}
