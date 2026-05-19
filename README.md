@@ -5,7 +5,7 @@ Identifies, screens, and synthesizes studies that use Oxford Nanopore Technology
 for bacteriophage genome assembly and characterization.
 
 Built on [enju](https://github.com/enjuio/enju) — a human-AI collaborative task orchestration
-system. The full pipeline runs as a DAG of compute tasks and AI bot sessions, with human
+system. The full pipeline runs as a DAG of compute tasks and AI agent sessions, with human
 review gates at key decision points.
 
 ---
@@ -19,7 +19,7 @@ PubMed Search (E-utilities)
   Deduplication (PMID / DOI / title)
         │
         ▼
-  Abstract Screening ──── screener-bot (Haiku)
+  Abstract Screening ──── screener-agent (Haiku)
         │
         ▼
   ┌─ Human Review Gate ─┐
@@ -32,20 +32,20 @@ PubMed Search (E-utilities)
   Full-text Fetch (PMC via elink + efetch)
         │
         ▼
-  Uncertainty Resolution ── resolver-bot (Haiku)
+  Uncertainty Resolution ── resolver-agent (Haiku)
         │
         ▼
   ┌─ Human Review Gate ─┐
   │  approve / revise   │
   └─────────────────────┘
         │
-        ├──▶  Data Extraction ─── extractor-bot (Sonnet*)
+        ├──▶  Data Extraction ─── extractor-agent (Sonnet*)
         │
         ▼
   Final PRISMA Counts + SVG Diagram
         │
         ▼
-  Synthesis ─── synthesizer-bot (Sonnet*)
+  Synthesis ─── synthesizer-agent (Sonnet*)
         │
         ▼
   data/synthesis.md  +  data/prisma_diagram.svg
@@ -55,20 +55,20 @@ _\* PoC run used Haiku throughout. Switch to Sonnet/Opus for production._
 
 ### Tasks
 
-| Stage | Task ID | Action | Bot / Runner |
+| Stage | Task ID | Action | Agent / Runner |
 |-------|---------|--------|--------------|
 | 1 | `search_pubmed` | compute | python:3.12-slim |
 | 2 | `deduplicate` | compute | python:3.12-slim |
-| 3 | `screen_abstracts` | answer | screener-bot (Haiku) |
+| 3 | `screen_abstracts` | answer | screener-agent (Haiku) |
 | 4 | `review_screening` | **review** | human (tamer) |
 | 5 | `prisma_counts` | compute | python:3.12-slim |
 | 6 | `fetch_fulltext` | compute | python:3.12-slim |
-| 7 | `resolve_uncertain` | answer | resolver-bot (Haiku) |
+| 7 | `resolve_uncertain` | answer | resolver-agent (Haiku) |
 | 8 | `review_resolution` | **review** | human (tamer) |
-| 9 | `extract_data` | answer | extractor-bot (Sonnet) |
+| 9 | `extract_data` | answer | extractor-agent (Sonnet) |
 | 10 | `prisma_counts_final` | compute | python:3.12-slim |
 | 11 | `prisma_diagram` | compute | python:3.12-slim |
-| 12 | `synthesize` | answer | synthesizer-bot (Sonnet) |
+| 12 | `synthesize` | answer | synthesizer-agent (Sonnet) |
 
 ---
 
@@ -183,9 +183,9 @@ of the 99 deduped records — distinct from the PoC numbers above.
 - [ ] **Switch extractor + synthesizer to Sonnet** (or Opus for synthesis) in `enju.yaml` — biggest quality gain
 - [ ] **Fix synthesizer prompt**: add explicit instruction *"Copy PRISMA counts verbatim from `prisma_counts_final.tsv` — do not estimate or round"*
 - [ ] **Add Scopus / Web of Science search** as additional `search_*` tasks feeding into a merged dedup step
-- [ ] **Inter-rater reliability task**: run screener-bot twice with different seeds and compute Cohen's κ — PRISMA 2020 requires this for AI-assisted screening
+- [ ] **Inter-rater reliability task**: run screener-agent twice with different seeds and compute Cohen's κ — PRISMA 2020 requires this for AI-assisted screening
 - [ ] **Full-text PDF fallback**: for papers not in PMC, try Unpaywall API or DOI resolver before giving up
-- [ ] **Structured quality assessment**: add a task where a bot scores each included paper on a risk-of-bias checklist (e.g., completeness of reporting, sequencing depth)
+- [ ] **Structured quality assessment**: add a task where an agent scores each included paper on a risk-of-bias checklist (e.g., completeness of reporting, sequencing depth)
 
 ### Scientific scope
 - [ ] **Broaden date range** to 2016–2024 (ONT phage work pre-dates 2018)
@@ -208,8 +208,8 @@ of the 99 deduped records — distinct from the PoC numbers above.
 enju_create_project(path="/data/prisma-review")
 enju_set_project_remote(...)
 
-# Start all bots
-enju_bot_start_all(workflow="enju.yaml", project_id=3)
+# Start all agents
+enju_agent_start_all(workflow="enju.yaml", project_id=3)
 
 # Create a new run (production — use Sonnet models in enju.yaml first)
 enju_create_run(path="enju.yaml", params={
@@ -220,7 +220,7 @@ enju_create_run(path="enju.yaml", params={
 })
 
 # Human tasks: review_screening and review_resolution appear in your inbox
-# All compute tasks run automatically; bot tasks are auto-claimed
+# All compute tasks run automatically; agent tasks are auto-claimed
 ```
 
 ## Outputs

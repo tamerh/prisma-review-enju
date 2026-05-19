@@ -51,10 +51,10 @@ defaults:
   assign_to: tamer
 
 agents:
-  - name: screener-bot
+  - name: screener-agent
     model: claude-haiku-4-5-20251001
     handler: claude
-    system_prompt: prompts/screener_bot.md
+    system_prompt: prompts/screener_agent.md
     mcp_tools:
       allow: [Read, Write, Bash]
     args:
@@ -63,10 +63,10 @@ agents:
       - "--append-system-prompt={{system_prompt}}"
       - "--allowedTools={{allowed_tools}}"
 
-  - name: resolver-bot
+  - name: resolver-agent
     model: claude-haiku-4-5-20251001
     handler: claude
-    system_prompt: prompts/resolver_bot.md
+    system_prompt: prompts/resolver_agent.md
     mcp_tools:
       allow: [Read, Write, Bash]
     args:
@@ -75,10 +75,10 @@ agents:
       - "--append-system-prompt={{system_prompt}}"
       - "--allowedTools={{allowed_tools}}"
 
-  - name: extractor-bot
+  - name: extractor-agent
     model: claude-haiku-4-5-20251001
     handler: claude
-    system_prompt: prompts/extractor_bot.md
+    system_prompt: prompts/extractor_agent.md
     mcp_tools:
       allow: [Read, Write, Bash]
     args:
@@ -87,10 +87,10 @@ agents:
       - "--append-system-prompt={{system_prompt}}"
       - "--allowedTools={{allowed_tools}}"
 
-  - name: synthesizer-bot
+  - name: synthesizer-agent
     model: claude-haiku-4-5-20251001
     handler: claude
-    system_prompt: prompts/synthesizer_bot.md
+    system_prompt: prompts/synthesizer_agent.md
     mcp_tools:
       allow: [Read, Write, Bash]
     args:
@@ -130,7 +130,7 @@ tasks:
 
   - id: screen_abstracts
     action: answer
-    assign_to: screener-bot
+    assign_to: screener-agent
     depends_on: [deduplicate]
     reads:
       - "data/unique_records.jsonl"
@@ -211,7 +211,7 @@ tasks:
 
   - id: resolve_uncertain
     action: answer
-    assign_to: resolver-bot
+    assign_to: resolver-agent
     depends_on: [fetch_fulltext]
     reads:
       - "data/screening_decisions.jsonl"
@@ -240,7 +240,7 @@ tasks:
 
   - id: extract_data
     action: answer
-    assign_to: extractor-bot
+    assign_to: extractor-agent
     depends_on: [fetch_fulltext, screen_abstracts]
     reads:
       - "data/screening_decisions.jsonl"
@@ -259,7 +259,7 @@ tasks:
 
   - id: synthesize
     action: answer
-    assign_to: synthesizer-bot
+    assign_to: synthesizer-agent
     depends_on: [extract_data, resolve_uncertain]
     reads:
       - "data/extracted_data.jsonl"

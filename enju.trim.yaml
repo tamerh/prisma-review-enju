@@ -10,8 +10,8 @@
 # data extraction, final counts, SVG, synthesis) is intentionally
 # dropped — we iterate from this slice's results before extending.
 #
-# Faithful to enju.yaml: the 5 task blocks and screener-bot are copied
-# verbatim. Only screener-bot is kept (the only bot in tasks 1–5);
+# Faithful to enju.yaml: the 5 task blocks and screener-agent are copied
+# verbatim. Only screener-agent is kept (the only agent in tasks 1–5);
 # resolver/extractor/synthesizer are dropped so auto_agents doesn't
 # spin unused daemons. Scope per run is controlled via max_results at
 # create_run time (kept faithful here; pass a small value for a
@@ -54,10 +54,10 @@ defaults:
   assign_to: tamer
 
 agents:
-  - name: screener-bot
+  - name: screener-agent
     model: claude-sonnet-4-6
     handler: claude
-    system_prompt: prompts/screener_bot.md
+    system_prompt: prompts/screener_agent.md
     mcp_tools:
       allow: [Read, Write, Bash]
     args:
@@ -97,7 +97,7 @@ tasks:
 
   - id: screen_abstracts
     action: answer
-    assign_to: screener-bot
+    assign_to: screener-agent
     depends_on: [deduplicate]
     reads:
       - "data/unique_records.jsonl"
