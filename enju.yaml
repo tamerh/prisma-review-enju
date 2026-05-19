@@ -1,5 +1,5 @@
 # =============================================================================
-# PRISMA Systematic Review — Nanopore Phage Genomics
+# PRISMA Systematic Review — FMT for Recurrent C. difficile (RCTs)
 # =============================================================================
 #
 # Reproducible literature screening pipeline following PRISMA 2020 guidelines.
@@ -8,10 +8,11 @@
 # Run with:
 #   enju_create_run(path=enju.yaml, params={...})
 
-name: "PRISMA Review — Nanopore Phage Genomics"
+name: "PRISMA Review — FMT for Recurrent C. difficile (RCTs)"
 description: |
-  Systematic review of studies using Oxford Nanopore Technology (ONT)
-  for bacteriophage genome assembly and characterization.
+  Systematic review of randomized controlled trials of fecal
+  microbiota transplantation (FMT) for recurrent/refractory
+  Clostridioides difficile infection (rCDI).
   Follows PRISMA 2020 reporting guidelines.
 version: 1
 
@@ -29,12 +30,12 @@ sync:
 params:
   - name: search_query
     type: string
-    default: '("nanopore" OR "Oxford Nanopore" OR "MinION" OR "long-read") AND ("bacteriophage" OR "phage") AND ("genome" OR "sequencing" OR "assembly" OR "characterization")'
+    default: '("fecal microbiota transplant*" OR "faecal microbiota transplant*" OR FMT) AND ("Clostridioides difficile" OR "Clostridium difficile" OR CDI) AND (randomized OR randomised OR "randomized controlled trial"[pt])'
     description: "PubMed search query string."
 
   - name: date_from
     type: string
-    default: "2018"
+    default: "2013"
     description: "Start year for publication date filter."
 
   - name: date_to
@@ -52,7 +53,7 @@ defaults:
 
 agents:
   - name: screener-agent
-    model: claude-haiku-4-5-20251001
+    model: claude-sonnet-4-6
     handler: claude
     system_prompt: prompts/screener_agent.md
     mcp_tools:
@@ -64,7 +65,7 @@ agents:
       - "--allowedTools={{allowed_tools}}"
 
   - name: resolver-agent
-    model: claude-haiku-4-5-20251001
+    model: claude-sonnet-4-6
     handler: claude
     system_prompt: prompts/resolver_agent.md
     mcp_tools:
@@ -76,7 +77,7 @@ agents:
       - "--allowedTools={{allowed_tools}}"
 
   - name: extractor-agent
-    model: claude-haiku-4-5-20251001
+    model: claude-sonnet-4-6
     handler: claude
     system_prompt: prompts/extractor_agent.md
     mcp_tools:
@@ -88,7 +89,7 @@ agents:
       - "--allowedTools={{allowed_tools}}"
 
   - name: synthesizer-agent
-    model: claude-haiku-4-5-20251001
+    model: claude-sonnet-4-6
     handler: claude
     system_prompt: prompts/synthesizer_agent.md
     mcp_tools:
@@ -141,18 +142,24 @@ tasks:
       `data/unique_records.jsonl` and write your decisions to
       `data/screening_decisions.jsonl`.
 
-      Inclusion criteria:
-        1. Uses Oxford Nanopore Technology (ONT) sequencing
-        2. Studies isolated bacteriophage / phage genomes
-        3. Reports genome assembly or complete/draft genome sequence
-        4. Primary research article (not review, editorial, or letter)
-        5. Published 2018-2024
+      Decide each record SOLELY from its own title/abstract in
+      that file. Do NOT read the README, prior results, or any
+      other project file; your decision count must equal the
+      number of input records.
 
-      Exclusion criteria:
-        - Short-read only (Illumina, no ONT)
-        - Prophage prediction from bacterial genomes (no isolated phage)
-        - Conference abstract or poster only
-        - Non-English
+      Inclusion criteria (ALL):
+        1. Population: recurrent/refractory C. difficile infection
+        2. Intervention: fecal microbiota transplantation (FMT)
+        3. Design: randomized controlled trial
+        4. Reports a clinical outcome (cure / recurrence)
+        5. Human, English, published 2013-2024
+
+      Exclusion criteria (ANY):
+        - Not an RCT (case series/cohort/review/protocol/editorial)
+        - Indication is not rCDI (FMT for IBD/IBS/other only)
+        - No FMT arm (probiotics/antibiotics only)
+        - Animal / in-vitro / modelling only
+        - Non-English or abstract-only without trial data
 
       Output format — one JSON object per line:
         {"pmid": "...", "decision": "include|exclude|uncertain",
@@ -273,10 +280,12 @@ tasks:
       and `data/prisma_counts_final.tsv` for the PRISMA flow counts.
 
       Write a publication-ready synthesis to `data/synthesis.md` with:
-      1. A markdown table of all included phage genome records
-         (columns: PMID, Phage, Host, Genome size (bp), Topology,
-          ONT platform, Assembler, Polishing, Hybrid, Completeness, Key finding)
-      2. A Results paragraph (~150 words) summarizing the included studies
+      1. A markdown table of all included RCTs
+         (columns: PMID, Trial / first author + year, Population &
+          n, FMT route, Comparator, Primary outcome, Cure /
+          recurrence result, Follow-up, Key finding)
+      2. A Results paragraph (~150 words) summarizing the included
+         trials (efficacy of FMT vs comparators for rCDI)
       3. A Methods paragraph (~100 words) describing the search and screening
 
   # ─── Phase 2: Final PRISMA counts ─────────────────────────────────────────
