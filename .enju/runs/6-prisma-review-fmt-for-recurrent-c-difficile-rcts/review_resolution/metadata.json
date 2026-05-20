@@ -1,0 +1,10 @@
+{
+  "action": "review",
+  "decision": "approve",
+  "model": "claude-opus-4",
+  "result_type": "text",
+  "reviews_target": "resolve_uncertain",
+  "task_id": "10:6:review_resolution",
+  "timestamp": "2026-05-20T07:23:14+02:00",
+  "username": "tamer"
+}
