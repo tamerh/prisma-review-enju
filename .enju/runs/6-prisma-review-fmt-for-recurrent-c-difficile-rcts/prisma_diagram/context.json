@@ -1,0 +1,21 @@
+{
+  "instance_key": "",
+  "iteration": null,
+  "params": {
+    "date_from": "2013",
+    "date_to": "2024",
+    "max_results": 1000,
+    "search_query": "(\"fecal microbiota transplant*\" OR \"faecal microbiota transplant*\" OR FMT) AND (\"Clostridioides difficile\" OR \"Clostridium difficile\" OR CDI) AND (randomized OR randomised OR \"randomized controlled trial\"[pt])"
+  },
+  "reads_artifacts": [
+    "data/prisma_counts_final.tsv"
+  ],
+  "task_def_id": "prisma_diagram",
+  "task_id": "10:6:prisma_diagram",
+  "writes_artifacts": [
+    {
+      "path": "data/prisma_diagram.svg",
+      "track": true
+    }
+  ]
+}
