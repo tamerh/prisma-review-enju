@@ -1,0 +1,23 @@
+
+PRISMA 2020 Flow Diagram (Final)
+════════════════════════════════════════
+
+IDENTIFICATION
+  Records identified via PubMed:           220
+  Records retrieved (cap):                 219
+
+SCREENING
+  Duplicates removed:                        2
+  Records screened (title/abstract):       217
+    └─ Excluded at abstract screen:        201
+    └─ Uncertain → full-text review:         3
+        └─ Resolved include:                 1
+        └─ Resolved exclude:                 2
+
+INCLUDED
+  Confirmed at abstract screen:             13
+  Added after full-text review:              1
+  ─────────────────────────────────────────────
+  Total included:                           14
+
+════════════════════════════════════════
