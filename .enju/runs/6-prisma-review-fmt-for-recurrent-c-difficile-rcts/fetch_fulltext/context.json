@@ -1,0 +1,21 @@
+{
+  "instance_key": "",
+  "iteration": null,
+  "params": {
+    "date_from": "2013",
+    "date_to": "2024",
+    "max_results": 1000,
+    "search_query": "(\"fecal microbiota transplant*\" OR \"faecal microbiota transplant*\" OR FMT) AND (\"Clostridioides difficile\" OR \"Clostridium difficile\" OR CDI) AND (randomized OR randomised OR \"randomized controlled trial\"[pt])"
+  },
+  "reads_artifacts": [
+    "data/screening_decisions.jsonl"
+  ],
+  "task_def_id": "fetch_fulltext",
+  "task_id": "10:6:fetch_fulltext",
+  "writes_artifacts": [
+    {
+      "path": "data/fulltext_manifest.tsv",
+      "track": true
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "action": "compute",
+  "elapsed_ms": 48349,
+  "exit_code": 0,
+  "model": "",
+  "result_type": "text",
+  "script": "scripts/04_fetch_fulltext.py",
+  "task_id": "10:6:fetch_fulltext",
+  "timestamp": "2026-05-20T07:10:15+02:00"
+}
