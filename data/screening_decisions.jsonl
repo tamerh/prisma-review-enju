@@ -1,0 +1,217 @@
+{"pmid": "40348491", "decision": "exclude", "reason": "Review/commentary on FMT for IBD, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "39547534", "decision": "uncertain", "reason": "Economic evaluation alongside an RCT of FMT for first/second CDI episode (not recurrent), so population may not meet I1; insufficient abstract detail to confirm all inclusion criteria.", "criteria_failed": []}
+{"pmid": "39509684", "decision": "exclude", "reason": "Narrative review of CDI management for surgeons, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "39484168", "decision": "exclude", "reason": "Network meta-analysis of rCDI interventions, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "39488230", "decision": "exclude", "reason": "RCT of comprehensive geriatric assessment vs standard care for CDI in older patients; intervention is CGA, not FMT, and FMT is only an adjunct available to both arms.", "criteria_failed": ["E3"]}
+{"pmid": "39366468", "decision": "exclude", "reason": "Phase 2 RCT of CP101 (oral microbiome therapeutic, not FMT) vs placebo for recurrent CDI.", "criteria_failed": ["E3"]}
+{"pmid": "38841848", "decision": "exclude", "reason": "Review of microbiome-based therapies in IBD, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "38690018", "decision": "exclude", "reason": "Editorial on FMT for irritable bowel syndrome, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "38680517", "decision": "exclude", "reason": "Clinical practice guideline update for CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "38609760", "decision": "exclude", "reason": "Clinical practice guidelines (BSG/HIS) for FMT, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "38609165", "decision": "exclude", "reason": "Clinical practice guidelines (BSG/HIS) for FMT published in Gut, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "38501667", "decision": "include", "reason": "Multicenter RCT of FMT plus bezlotoxumab vs FMT plus placebo in patients with IBD and rCDI, reporting clinical CDI recurrence outcome.", "criteria_failed": []}
+{"pmid": "38470061", "decision": "exclude", "reason": "Review article on Rebyota (fecal microbiota, live-jslm), not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "38391047", "decision": "exclude", "reason": "Systematic review of FMT in children, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "38292634", "decision": "exclude", "reason": "Review of gut-targeted therapies for type 2 diabetes, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "38019088", "decision": "exclude", "reason": "Subgroup analysis of RBX2660 (live biotherapeutic product, not donor-based FMT) Phase 2/3 trials, not a primary RCT of FMT.", "criteria_failed": ["E1", "E3"]}
+{"pmid": "37872499", "decision": "exclude", "reason": "Crossover proof-of-concept study comparing contrast fluid distribution for FMT delivery route evaluation, not an RCT reporting clinical outcomes for rCDI.", "criteria_failed": ["E1"]}
+{"pmid": "37823484", "decision": "exclude", "reason": "Post-hoc analysis of ECOSPOR III trial evaluating VOWST (SER-109 spore-based therapeutic, not donor FMT) on antimicrobial resistance genes.", "criteria_failed": ["E1", "E3"]}
+{"pmid": "37756322", "decision": "exclude", "reason": "Phase I RCT of autologous FMT in healthy volunteers given clindamycin to disrupt microbiota; population is healthy volunteers, not rCDI patients.", "criteria_failed": ["E1"]}
+{"pmid": "37606431", "decision": "exclude", "reason": "Case report of multidrug-resistant CDI in a patient with IBD, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "37484415", "decision": "exclude", "reason": "Laboratory study of short-chain fatty acids from FMT and microglial inflammation, not an RCT for rCDI.", "criteria_failed": ["E1", "E4"]}
+{"pmid": "37404011", "decision": "exclude", "reason": "Study of microbial consortium for decolonization, not an RCT of FMT for rCDI.", "criteria_failed": ["E1"]}
+{"pmid": "37274301", "decision": "exclude", "reason": "Systematic review and meta-analysis of microbiota restoration for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "37096495", "decision": "exclude", "reason": "Cochrane systematic review and meta-analysis of FMT for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36969340", "decision": "exclude", "reason": "Phase 2 RCT of FMT for progressive supranuclear palsy (neurological disease), not rCDI.", "criteria_failed": ["E2"]}
+{"pmid": "36778473", "decision": "exclude", "reason": "Small pilot RCT of FMT for IBD (UC and CD), not for rCDI.", "criteria_failed": ["E2"]}
+{"pmid": "36717202", "decision": "exclude", "reason": "Drug and therapeutics bulletin commentary on early use of FMT for CDI; no abstract and appears to be editorial/commentary, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36656270", "decision": "exclude", "reason": "Systematic review and network meta-analysis of fresh, frozen, and lyophilized FMT for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36557703", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT for CDI in children and adolescents, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36519447", "decision": "exclude", "reason": "Observational study of gut microbiota differences after FMT for rCDI; not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36468073", "decision": "exclude", "reason": "Systematic review and network meta-analysis comparing FMT types for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36451382", "decision": "exclude", "reason": "Protocol for a systematic review of oral FMT for recurrent bowel disease, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36287379", "decision": "exclude", "reason": "Phase III RCT of RBX2660 (live biotherapeutic product, not donor-based FMT) vs placebo for recurrent CDI.", "criteria_failed": ["E3"]}
+{"pmid": "36168377", "decision": "exclude", "reason": "Systematic review on FMT for reducing CDI morbidity/mortality with empty abstract, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36158494", "decision": "exclude", "reason": "Narrative review of gut microbiota in gastrointestinal diseases, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36152636", "decision": "include", "reason": "Randomized, double-blind, placebo-controlled trial (EarlyFMT) of FMT vs placebo after vancomycin for first or second CDI episode, reporting resolution of CDI-associated diarrhea.", "criteria_failed": []}
+{"pmid": "36066910", "decision": "exclude", "reason": "Systematic review and meta-analysis of adverse events of FMT in children, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "35884093", "decision": "exclude", "reason": "Systematic review of FMT in decompensated cirrhosis (non-CDI indication), not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "35841835", "decision": "exclude", "reason": "Review of metabolites and CDI biology, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "35760542", "decision": "exclude", "reason": "Protocol for RCT of FMT for irritable bowel syndrome (IBS), not rCDI.", "criteria_failed": ["E2"]}
+{"pmid": "35479587", "decision": "exclude", "reason": "Systematic review and meta-analysis of adverse events of FMT for CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "35463939", "decision": "exclude", "reason": "Health-related quality of life analysis from a Danish RCT for rCDI; secondary analysis/observational paper, not primary RCT reporting clinical efficacy.", "criteria_failed": ["E1"]}
+{"pmid": "35398532", "decision": "exclude", "reason": "RCT protocol comparing antibiotic regimens (fidaxomicin vs vancomycin) for recurrent CDI with no FMT arm.", "criteria_failed": ["E3"]}
+{"pmid": "35193638", "decision": "exclude", "reason": "Protocol for RCT of FMT for active ulcerative colitis (not rCDI).", "criteria_failed": ["E2"]}
+{"pmid": "35118227", "decision": "exclude", "reason": "Systematic review of FMT for severe/fulminant CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "39131119", "decision": "exclude", "reason": "Retrospective cohort study of FMT for CDI evaluating family vs stool bank donation, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "35050941", "decision": "exclude", "reason": "Systematic review and meta-analysis of predictors of FMT failure for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34992678", "decision": "exclude", "reason": "Review article on FMT for recurrent CDI (empty abstract), not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34864789", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT for CDI in IBD patients, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34815646", "decision": "exclude", "reason": "Meta-analysis of adverse events from high-quality FMT studies, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34735024", "decision": "exclude", "reason": "Narrative review of FMT for gastrointestinal diseases, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34678515", "decision": "exclude", "reason": "Clinical practice guideline update (ESCMID 2021) for CDI treatment, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34585964", "decision": "exclude", "reason": "Animal study (mouse model) of osmotic laxative effects on C. difficile colonization, not a human RCT.", "criteria_failed": ["E4"]}
+{"pmid": "34557546", "decision": "exclude", "reason": "Systematic review of CDI in chronic kidney disease patients, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34516460", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT vs medical therapy for CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34484424", "decision": "exclude", "reason": "Systematic review of encapsulated FMT studies, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34275058", "decision": "exclude", "reason": "Literature review of RCT heterogeneity in FMT for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34232137", "decision": "exclude", "reason": "Review article on CDI in children, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "34154439", "decision": "uncertain", "reason": "Describes a VA system RCT of capsule-delivered FMT for prevention of recurrent CDI; appears to be a recruitment/design report rather than results, and the abstract lacks sufficient outcome data to confirm inclusion.", "criteria_failed": []}
+{"pmid": "33981340", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT for ulcerative colitis, not for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "33844988", "decision": "exclude", "reason": "Translational study of microRNA changes after FMT for rCDI using data from prior RCTs; not a primary RCT reporting clinical outcomes.", "criteria_failed": ["E1"]}
+{"pmid": "33800841", "decision": "exclude", "reason": "Ten-year follow-up observational study of FMT for rCDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33795620", "decision": "exclude", "reason": "Systematic review comparing FMT vs vancomycin for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33748913", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT for severe/fulminant CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33694229", "decision": "include", "reason": "Open-label 3-arm RCT comparing FMT by enema vs 12-strain rectal bacteriotherapy vs vancomycin for recurrent CDI, reporting clinical cure within 90 days.", "criteria_failed": []}
+{"pmid": "33631102", "decision": "exclude", "reason": "Phase 1, open-label, single-group feasibility study of MET-2 (defined bacterial consortium, not donor FMT) for recurrent CDI; no randomization, no control arm.", "criteria_failed": ["E1", "E3"]}
+{"pmid": "33614028", "decision": "exclude", "reason": "Review article on the role of FMT beyond CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33496893", "decision": "exclude", "reason": "Systematic review and meta-analysis of predictors of FMT failure for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33471490", "decision": "exclude", "reason": "Systematic review and meta-analysis of oral FMT capsules for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33437951", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33121693", "decision": "exclude", "reason": "Narrative review of FMT for ulcerative colitis, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "33106983", "decision": "exclude", "reason": "Network meta-analysis of therapies for multiple recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "33035780", "decision": "exclude", "reason": "Review of FMT for inflammatory bowel disease, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "32999906", "decision": "exclude", "reason": "Review of gastrointestinal microbiome role in various diseases, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "32979161", "decision": "exclude", "reason": "Retrospective single-centre study of FMT as first-line CDI treatment, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "36777748", "decision": "exclude", "reason": "Review of FMT for ulcerative colitis, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "32632582", "decision": "exclude", "reason": "Narrative review of bezlotoxumab for prevention of rCDI, not an RCT of FMT.", "criteria_failed": ["E1", "E3"]}
+{"pmid": "32618715", "decision": "exclude", "reason": "Review of CDI treatment in solid organ transplant recipients, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "32518854", "decision": "exclude", "reason": "Trial protocol/design paper for RCT of FMT for patients on antibiotics with rCDI; not a completed trial with outcomes.", "criteria_failed": ["E1"]}
+{"pmid": "32266160", "decision": "exclude", "reason": "Review of FMT for neurological disorders, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "32255488", "decision": "exclude", "reason": "Phase 2 RCT of SER-109 (purified spore-based drug, not donor FMT) vs placebo for recurrent CDI.", "criteria_failed": ["E3"]}
+{"pmid": "32182248", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT and VSL#3 for ulcerative colitis, not for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "32166622", "decision": "exclude", "reason": "Systematic review and meta-analysis comparing FMT delivery routes for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "32083498", "decision": "exclude", "reason": "Review of FMT for ulcerative colitis, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "32009472", "decision": "exclude", "reason": "Network meta-analysis of biological agents, tofacitinib, and FMT for ulcerative colitis; not a primary RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "31993353", "decision": "exclude", "reason": "Randomized placebo-controlled study of FMT effects on BMI in children with CDI or UC; the primary outcome (BMI change) is not a clinical CDI cure/resolution outcome, and study mixes CDI and UC populations.", "criteria_failed": ["E1"]}
+{"pmid": "31976311", "decision": "uncertain", "reason": "Double-blind pilot RCT comparing standard FMT capsules vs FMT enriched with Lactobacillus for rCDI, reporting bowel movement reduction; very small sample (21 patients) and limited abstract detail.", "criteria_failed": []}
+{"pmid": "31950808", "decision": "exclude", "reason": "Review article on FMT for ulcerative colitis, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "31803254", "decision": "exclude", "reason": "Review of knowledge gaps in FMT for IBD, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "31699731", "decision": "exclude", "reason": "Systematic review and Bayesian network meta-analysis comparing FMT vs bezlotoxumab for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31662862", "decision": "exclude", "reason": "Network meta-analysis of therapies for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31570017", "decision": "exclude", "reason": "Review of microbiota modulation therapies for GI disorders, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31493500", "decision": "exclude", "reason": "Systematic review of RCTs for prevention of recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31476300", "decision": "exclude", "reason": "Study of serum N-glycan structures after FMT for rCDI; biomarker study, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31472233", "decision": "exclude", "reason": "Critical review/commentary of FMT RCTs for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31379333", "decision": "exclude", "reason": "Review of FMT history and therapeutic indications, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31361890", "decision": "exclude", "reason": "Pharmacist-oriented review of FMT RCTs for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31254675", "decision": "exclude", "reason": "Retrospective study of trial eligibility and willingness to participate in microbe-based therapeutic trials, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31201141", "decision": "exclude", "reason": "Review of FMT applications beyond rCDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31190948", "decision": "exclude", "reason": "Review discussing why microbiome targeting therapies may have variable success, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31169545", "decision": "exclude", "reason": "Review of FMT in pediatric patients, not an RCT for rCDI.", "criteria_failed": ["E1"]}
+{"pmid": "31136009", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT for irritable bowel syndrome, not a primary RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "31066530", "decision": "exclude", "reason": "French review article on FMT indications, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31017741", "decision": "exclude", "reason": "Review of FMT current applications in intestinal disorders, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "31005136", "decision": "exclude", "reason": "Review of CDI in stem cell transplant and hematologic malignancy patients, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30986885", "decision": "exclude", "reason": "Review (in German) on FMT for ulcerative colitis, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30986562", "decision": "exclude", "reason": "Systematic review of FMT for eradicating multidrug-resistant organism carriage, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30957161", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT cure rates in clinical trials for rCDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30926290", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT for decolonization of antibiotic-resistant bacteria, not a primary RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30906424", "decision": "exclude", "reason": "Review of FMT for inflammatory bowel disease, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30815766", "decision": "exclude", "reason": "Clinical review of FMT in immunocompromised patients, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30673716", "decision": "exclude", "reason": "Systematic review and meta-analysis of fresh FMT RCTs for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30627262", "decision": "exclude", "reason": "Single-centre retrospective cohort study of long-term FMT outcomes for rCDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30610862", "decision": "include", "reason": "Single-centre RCT comparing FMT (after vancomycin) vs fidaxomicin vs vancomycin for recurrent CDI, reporting combined clinical and microbiological resolution at 8 weeks.", "criteria_failed": []}
+{"pmid": "30480772", "decision": "exclude", "reason": "Systematic review and Cochrane meta-analysis of FMT for IBD (UC and CD), not a primary RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30288286", "decision": "exclude", "reason": "Systematic review of FMT for recurrent CDI comparing different FMT protocols (number of infusions), not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30246002", "decision": "exclude", "reason": "Systematic review of FMT for CDI in immunocompromised patients, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30218939", "decision": "exclude", "reason": "Review of FMT for IBS and functional constipation with discussion of RCTs, not a primary RCT.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "30181015", "decision": "exclude", "reason": "Review article on FMT history, indications, and methods, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30138161", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT vs standard-of-care for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "29879241", "decision": "exclude", "reason": "Clinical inquiry/narrative review on FMT safety and efficacy for CDI prevention, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "29860912", "decision": "exclude", "reason": "Letter to NEJM regarding FMT for primary CDI infection; not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "29851107", "decision": "include", "reason": "RCT comparing single vs multiple FMT infusions (via colonoscopy plus vancomycin) for severe refractory CDI, reporting cure of refractory severe CDI.", "criteria_failed": []}
+{"pmid": "29688901", "decision": "exclude", "reason": "Systematic review of encapsulated FMT safety and efficacy for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "29637938", "decision": "exclude", "reason": "Review article on FMT for UC and other GI conditions beyond CDI, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "29600252", "decision": "exclude", "reason": "Editorial questioning whether single FMT is promising for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "29564058", "decision": "exclude", "reason": "Review of FMT for IBD beyond CDI, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "29538686", "decision": "exclude", "reason": "Post-hoc analysis of MODIFY I/II trial data for bezlotoxumab (monoclonal antibody, not FMT) for rCDI prevention.", "criteria_failed": ["E1", "E3"]}
+{"pmid": "29528385", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT for CDI in IBD patients (cohort studies), not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "29450831", "decision": "exclude", "reason": "Descriptive review comparing FMT strategies at two English hospitals, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "29446866", "decision": "exclude", "reason": "Retrospective case series of tacrolimus levels in organ transplant patients receiving FMT for rCDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "29261736", "decision": "exclude", "reason": "Open pilot RCT of FMT vs oral vancomycin for first CDI episode (not recurrent CDI) with very small sample (19 patients); population may not meet I1.", "criteria_failed": ["E1"]}
+{"pmid": "29246701", "decision": "exclude", "reason": "Retrospective study of stool donor BMI effects on recipient weight after single FMT for CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "29183074", "decision": "include", "reason": "Noninferiority RCT of capsule-delivered vs colonoscopy-delivered FMT for recurrent CDI in adults, reporting proportion without recurrence at 12 weeks.", "criteria_failed": []}
+{"pmid": "29173524", "decision": "exclude", "reason": "Review of FMT evidence in IBD, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "29140453", "decision": "exclude", "reason": "Review of FMT for IBD (pitfalls and promises), not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "29130220", "decision": "exclude", "reason": "Chinese review article on FMT for gastrointestinal disorders, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "29076444", "decision": "exclude", "reason": "Dutch review article on FMT indications in perspective, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "28858073", "decision": "exclude", "reason": "Narrative review on FMT for CDI in IBD patients and for IBD, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "28840809", "decision": "exclude", "reason": "Review of FMT therapeutic potential beyond CDI, not an RCT for rCDI.", "criteria_failed": ["E1"]}
+{"pmid": "28827258", "decision": "exclude", "reason": "Protocol for pilot RCT of FMT for pediatric ulcerative colitis (not rCDI); no results.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "28814204", "decision": "exclude", "reason": "Systematic review and meta-analysis of RCTs of FMT for CDI-associated diarrhea, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "28723262", "decision": "exclude", "reason": "Systematic review and meta-analysis of IBD flares after FMT, not a primary RCT for rCDI.", "criteria_failed": ["E1"]}
+{"pmid": "28707337", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT efficacy for recurrent and refractory CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "28609252", "decision": "exclude", "reason": "Review of FMT for metabolic syndrome, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "28609251", "decision": "exclude", "reason": "Review of intestinal microbiota and FMT for IBD, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "28572645", "decision": "exclude", "reason": "Editorial on freeze-dried FMT capsules for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "28546791", "decision": "exclude", "reason": "Review article on FMT from CDI to beyond, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "28539351", "decision": "exclude", "reason": "Study of bacteriophage transfer during FMT for CDI; observational/translational study, not an RCT for rCDI.", "criteria_failed": ["E1"]}
+{"pmid": "28531908", "decision": "exclude", "reason": "Systematic review of methods and reporting quality in FMT studies, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "28345530", "decision": "exclude", "reason": "Polish review of FMT methods for recurrent CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "28315032", "decision": "exclude", "reason": "Review of novel indications for FMT beyond IBD and CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "28289858", "decision": "exclude", "reason": "Review of donor considerations for FMT, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "28220514", "decision": "include", "reason": "Double-blind RCT of fresh vs frozen vs lyophilized FMT via colonoscopy for recurrent CDI (\u22653 bouts), reporting CDI resolution rates at 2 months.", "criteria_failed": []}
+{"pmid": "28147375", "decision": "exclude", "reason": "Review of FMT for IBD, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "28011612", "decision": "include", "reason": "Phase 2/3 open-label RCT comparing vancomycin followed by FMT enema vs vancomycin taper for recurrent CDI, reporting CDI recurrence within 120 days.", "criteria_failed": []}
+{"pmid": "28008840", "decision": "exclude", "reason": "French review article on FMT indications and perspectives, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27999162", "decision": "exclude", "reason": "Microbiome analysis from a prior RCT of heterologous vs autologous FMT for rCDI; secondary/translational analysis, not a primary RCT reporting clinical outcomes.", "criteria_failed": ["E1"]}
+{"pmid": "27891639", "decision": "exclude", "reason": "Expert consensus report on FMT clinical applications, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27879485", "decision": "exclude", "reason": "Survey study of IBD patients' views on FMT, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "27861129", "decision": "exclude", "reason": "Review of FMT therapeutic potential for infectious and metabolic diseases, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27547925", "decision": "include", "reason": "Randomized, double-blind RCT of heterologous (donor) vs autologous (own stool) FMT by colonoscopy for recurrent CDI (\u22653 recurrences), reporting resolution of diarrhea at 8 weeks.", "criteria_failed": []}
+{"pmid": "27658471", "decision": "exclude", "reason": "Retrospective multicenter observational study (MicroTrans Registry) of FMT for recurrent CDI in Germany, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27648772", "decision": "exclude", "reason": "Systematic review of FMT for CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27621567", "decision": "exclude", "reason": "Review of microflora modulation strategies in intestinal inflammatory disorders, not an RCT for rCDI.", "criteria_failed": ["E1"]}
+{"pmid": "27609178", "decision": "exclude", "reason": "Prospective cohort study (no control arm) of oral frozen FMT capsules for recurrent CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27548724", "decision": "exclude", "reason": "Review of FMT for IBD, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "27529553", "decision": "exclude", "reason": "Systematic review of adverse events from FMT, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27516814", "decision": "exclude", "reason": "Health technology assessment reviewing FMT effectiveness and cost-effectiveness for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27493597", "decision": "exclude", "reason": "Review of FMT for IBD, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "27453747", "decision": "exclude", "reason": "Prospective case series (no randomization, no control arm) of FMT for recurrent CDI and UC, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27221557", "decision": "exclude", "reason": "German retrospective case series of FMT for relapsing CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27172442", "decision": "exclude", "reason": "Slovak review article on FMT, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27152872", "decision": "exclude", "reason": "Editorial/review of FMT for IBD, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "27109966", "decision": "exclude", "reason": "Meta-analysis and review of FMT for ulcerative colitis, not a primary RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "27043242", "decision": "exclude", "reason": "Economic evaluation (Markov model) of FMT for recurrent CDI in Australia, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "26986546", "decision": "exclude", "reason": "Analysis from a Phase II study of RBX2660 (microbiota-based drug, not standard donor FMT) examining donor effects; not an RCT of donor-based FMT vs control.", "criteria_failed": ["E1", "E3"]}
+{"pmid": "26974758", "decision": "exclude", "reason": "Collaborative analysis of individual patient data from 14 observational studies comparing FMT delivery routes, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "26924753", "decision": "exclude", "reason": "Review of FMT clinical applications and IBD evidence, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "26905904", "decision": "exclude", "reason": "Retrospective cohort study of FMT for recurrent CDI in IBD patients vs those without IBD, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "26901316", "decision": "exclude", "reason": "Decision analytic model cost-effectiveness analysis of six strategies for recurrent CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "26846120", "decision": "exclude", "reason": "Mouse model study of FMT effects on DSS-induced ulcerative colitis, not a human RCT.", "criteria_failed": ["E4", "E2"]}
+{"pmid": "26803556", "decision": "exclude", "reason": "Review of adverse events in faecal microbiota transplant literature, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "26757463", "decision": "include", "reason": "Randomized, double-blind noninferiority trial of frozen vs fresh FMT via enema for recurrent/refractory CDI in adults, reporting clinical resolution of diarrhea without relapse at 13 weeks.", "criteria_failed": []}
+{"pmid": "26662643", "decision": "exclude", "reason": "Systematic review and meta-analysis of long-term FMT outcomes for CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "26598094", "decision": "exclude", "reason": "Review of probiotics and FMT for primary and secondary prevention of CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "26566371", "decision": "exclude", "reason": "Review of FMT current clinical efficacy and future prospects, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "26141116", "decision": "exclude", "reason": "Review of CDI treatment options including FMT in the ICU, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "26070003", "decision": "exclude", "reason": "Observational study of fecal donor recruitment and screening, not an RCT for rCDI.", "criteria_failed": ["E1"]}
+{"pmid": "25954111", "decision": "exclude", "reason": "Systematic review of FMT for multiple GI conditions, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "25938992", "decision": "exclude", "reason": "Systematic review of FMT for CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "25728808", "decision": "include", "reason": "Open-label RCT comparing FMT via colonoscopy vs vancomycin for recurrent CDI, reporting resolution of CDI-associated diarrhea at 10 weeks.", "criteria_failed": []}
+{"pmid": "25574083", "decision": "exclude", "reason": "Review of FMT applications beyond intestinal disorders, not an RCT for rCDI.", "criteria_failed": ["E1"]}
+{"pmid": "25574076", "decision": "exclude", "reason": "Review of FMT policy and legislation, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "27025624", "decision": "exclude", "reason": "Review of FMT expanding horizons for CDI and beyond, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "25500625", "decision": "exclude", "reason": "Review of FMT for gastrointestinal diseases, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "25474284", "decision": "exclude", "reason": "Austrian Society consensus recommendations for FMT, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "25291136", "decision": "exclude", "reason": "Review article on FMT as a new/old therapy for gut microbiota-related disease, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "25274035", "decision": "exclude", "reason": "Review of FMT potential beneficial role in diseases other than CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "25273614", "decision": "exclude", "reason": "Review of practical implementation aspects of FMT for recurrent CDI, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "24762631", "decision": "include", "reason": "Randomized, open-label pilot RCT of FMT via colonoscopy vs nasogastric tube (using frozen unrelated donor inoculum) for relapsing/refractory CDI, reporting clinical resolution without relapse at 8 weeks.", "criteria_failed": []}
+{"pmid": "24636428", "decision": "exclude", "reason": "Review of faecal transplantation for CDI treatment, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "24440934", "decision": "exclude", "reason": "Systematic review of FMT for CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "24372725", "decision": "exclude", "reason": "Review of FMT for Clostridium difficile infection, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "24275671", "decision": "exclude", "reason": "Review of FMT benefits and barriers for CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "24241245", "decision": "exclude", "reason": "Review of FMT facts and controversies for recurrent CDI and other conditions, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "24100717", "decision": "exclude", "reason": "Review of FMT for recurrent CDI: current promise and future needs, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "24012687", "decision": "exclude", "reason": "Survey of infectious disease physicians on treatment approaches for recurrent CDI including FMT, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "23995428", "decision": "exclude", "reason": "Review of fecal transplantation as a treatment option in pediatric disease, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "23982236", "decision": "exclude", "reason": "Review of biological therapies for CDI including probiotics and FMT, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "23922461", "decision": "exclude", "reason": "Review/commentary on stool therapy for recurrent CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "23844515", "decision": "exclude", "reason": "Review article (Hebrew journal) on harnessing nature to treat CDI using FMT, not an RCT.", "criteria_failed": ["E1"]}
+{"pmid": "23511459", "decision": "exclude", "reason": "Systematic review and meta-analysis of FMT for CDI, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30403550", "decision": "exclude", "reason": "Review article on clinical applications and potential of FMT, not a primary RCT.", "criteria_failed": ["E1"]}
+{"pmid": "30388112", "decision": "include", "reason": "Randomized clinical trial comparing oral lyophilized FMT capsules vs frozen FMT by enema for recurrent CDI (\u22653 episodes), reporting CDI recurrence prevention and safety at 60 days.", "criteria_failed": []}
+{"pmid": "30335629", "decision": "exclude", "reason": "Review of post-infectious irritable bowel syndrome following CDI, not an RCT for rCDI.", "criteria_failed": ["E1", "E2"]}
+{"pmid": "22508484", "decision": "exclude", "reason": "Review of CDI epidemiology, diagnosis, and treatment in IBD patients, not an RCT.", "criteria_failed": ["E1"]}
