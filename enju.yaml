@@ -25,7 +25,7 @@ version: 1
 #   push  — merge, then push the default branch to `remote`
 #           (needs a configured git remote; n/a for no-origin).
 sync:
-  mode: merge
+  mode: push
 
 params:
   - name: search_query
