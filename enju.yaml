@@ -24,7 +24,7 @@ version: 1
 #           branch, locally (the right choice for single-machine).
 #   push  — merge, then push the default branch to `remote`
 #           (needs a configured git remote; n/a for no-origin).
-sync:
+publish:
   mode: push
 
 params:
